@@ -1,1 +1,1 @@
-/* call to action content */
+<!-- call to action content -->

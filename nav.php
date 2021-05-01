@@ -1,1 +1,1 @@
-/* navigation content */
+<!-- navigation content -->

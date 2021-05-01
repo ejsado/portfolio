@@ -1,1 +1,1 @@
-/* projects content */
+<!-- projects content -->

@@ -6,10 +6,10 @@
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-        <main>
-            <div id="container">
-                <h1 id="displayText">This is the development server?</h1>
-            </div>
-        </main>
+        <h1>This is the development server</h1>
+        <?php include 'logo-header.php';?>
+        <?php include 'actions.php';?>
+        <?php include 'nav.php';?>
+        <?php include 'projects.php';?>
     </body>
 </html>
