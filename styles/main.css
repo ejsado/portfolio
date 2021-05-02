@@ -1,5 +1,100 @@
 /* main styles */
 body {
     background: #D8DACC;
-    font-family: arial;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+    color: rgba(0,0,0,0.7);
+    font-size: 1rem;
+    font-weight: normal;
 }
+/* font styles */
+.text-weight-normal {
+    font-weight: 400;
+}
+.text-weight-bold {
+    font-weight: 700;
+}
+.text-weight-light {
+    font-weight: 300;
+}
+.text-align-center {
+    text-align: center;
+}
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-size-small {
+    font-size: 0.9rem;
+}
+.text-size-normal {
+    font-size: 1rem;
+}
+.text-size-large {
+    font-size: 1.2rem;
+}
+.vertical-align-middle {
+    vertical-align: middle;
+}
+.vertical-align-sub {
+    vertical-align: sub;
+}
+/* header */
+#logo-link {
+    display: block;
+    margin: 3rem auto;
+    width: 50vw;
+}
+#logo-svg {
+    display: block;
+    width: 50vw;
+    height: auto;
+    opacity: 0.8;
+}
+header p {
+    margin: 0.3rem;
+}
+/* call to actions */
+.actions p {
+    margin: 2rem 0 1rem 0;
+}
+.action-button {
+    display: block;
+    width: 94vw;
+    margin: 1rem auto;
+    border-radius: 6px;
+    padding: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+.action-button.solid {
+    background: #6A8253;
+    color: #FFF;
+}
+.action-button.outline {
+    background: #D6DECE;
+    color: #536641;
+    border: 2px solid #536641;
+    font-weight: 700;
+}
+/* navigation */
+nav {
+    margin: 2rem 0;
+    text-align: center;
+}
+.pill-button {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1.3rem;
+    text-decoration: none;
+}
+.pill-button.current-page {
+    background: rgba(0,0,0,0.5);
+    color: #FFF;
+    font-weight: 600;
+}
+
