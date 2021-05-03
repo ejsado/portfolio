@@ -40,10 +40,33 @@ body {
 .vertical-align-sub {
     vertical-align: sub;
 }
+/* top and bottom graphics */
+#body-container::before {
+    content: "";
+    display: block;
+    height: 3rem;
+    background-image: url('/media/banner-top-display.svg');
+    background-size: contain;
+}
+#body-container::after {
+    content: "";
+    display: block;
+    height: 3.5rem;
+    mask-image: url('/media/banner-bottom-display.svg');
+    -webkit-mask-image: url('/media/banner-bottom-display.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-position: right;
+    -webkit-mask-position: right;
+    background-color: #556950;
+    margin-top: -1rem;
+}
 /* header */
 #logo-link {
     display: block;
-    margin: 3rem auto;
+    margin: 1rem auto 2rem;
     width: 50vw;
 }
 #logo-svg {
@@ -57,13 +80,13 @@ header p {
 }
 /* call to actions */
 .actions p {
-    margin: 2rem 0 1rem 0;
+    margin: 2.5rem 0 1rem 0;
 }
 .action-button {
     display: block;
     width: 94vw;
     margin: 1rem auto;
-    border-radius: 6px;
+    border-radius: 0.4rem;
     padding: 0.8rem;
     text-decoration: none;
     text-align: center;
@@ -81,7 +104,7 @@ header p {
 }
 /* navigation */
 nav {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     text-align: center;
 }
 .pill-button {
@@ -97,4 +120,33 @@ nav {
     color: #FFF;
     font-weight: 600;
 }
+/* project thumbnails */
+main.projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-thumbnail {
+    margin: 0 auto 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid #FFF;
+    background-size: cover;
+}
+.project-link {
+    display: flex;
+    align-items: flex-end;
+    width: 94vw;
+    height: 60vw;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    background-image: linear-gradient(
+        rgba(0,0,0,0) 50%,
+        rgba(0,0,0,0.8)
+    );
+}
+.project-link p {
+    margin: 1rem;
+    color: #FFF;
+    font-weight: 500;
+}
+
 
