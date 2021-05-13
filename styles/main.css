@@ -4,11 +4,16 @@ body {
     font-family: 'Heebo', Arial, Helvetica, sans-serif;
     color: rgba(0,0,0,0.7);
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: 400;
 }
 /* font styles */
-h2 {
+h1 {
+    font-weight: 500;
     font-size: 2rem;
+    line-height: 2.4rem;
+}
+h2 {
+    font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
     color: #7E6557;
@@ -51,6 +56,11 @@ h2 {
     vertical-align: sub;
 }
 /* top and bottom graphics */
+#body-container {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 2.5rem;
+}
 #body-container::before {
     content: "";
     display: block;
@@ -61,7 +71,11 @@ h2 {
 #body-container::after {
     content: "";
     display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     height: 3.5rem;
+    width: 3.5rem;
     mask-image: url('/media/banner-bottom-display.svg');
     -webkit-mask-image: url('/media/banner-bottom-display.svg');
     mask-repeat: no-repeat;
@@ -71,7 +85,6 @@ h2 {
     mask-position: right;
     -webkit-mask-position: right;
     background-color: #556950;
-    margin-top: -1rem;
 }
 /* header */
 #logo-link {
@@ -82,6 +95,17 @@ h2 {
 #logo-svg {
     display: block;
     width: 50vw;
+    height: auto;
+    opacity: 0.8;
+}
+#logo-link-small {
+    display: block;
+    margin: 1rem auto 2rem;
+    width: 20vw;
+}
+#logo-svg-small {
+    display: block;
+    width: 20vw;
     height: auto;
     opacity: 0.8;
 }
@@ -134,8 +158,10 @@ nav {
 #projects {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 1rem;
 }
 .project-thumbnail {
+    flex-grow: 1;
     margin: 0 auto 1rem;
     border-radius: 0.4rem;
     border: 1px solid #FFF;
@@ -145,7 +171,6 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 94vw;
     height: 60vw;
     border-radius: 0.4rem;
     text-decoration: none;
@@ -275,4 +300,25 @@ nav {
     display: flex;
     justify-content: center;
 }
-
+/* 404 page */
+#lost {
+    margin: 2rem 1rem;
+    text-align: center;
+}
+/* project details */
+#project-info {
+    margin: 0 1rem;
+}
+#project-metadata {
+    display: flex;
+    justify-content: space-between
+}
+#project-metadata div p {
+    margin: 0;
+}
+#project-metadata div p:first-child {
+    font-size: 0.9rem;
+}
+#project-metadata div p:nth-child(2) {
+    font-weight: 500;
+}

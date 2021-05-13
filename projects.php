@@ -58,7 +58,7 @@
                     style="background-image: url(/projects/' . $thumbnail->name . '/thumbnail.png)"
                     data-date-added="' . $thumbnail->dateAdded . '"
                     data-date-updated="' . $thumbnail->dateUpdated . '">
-                    <a class="project-link" href="/projects/' . $thumbnail->name . '/">
+                    <a class="project-link" href="/projects/?name=' . $thumbnail->name . '">
                         <p class="text-size-large text-weight-medium">' . $thumbnail->question . '</p>
                         <p class="text-size-small text-align-right">' . date("F j, Y", $thumbnail->dateUpdated) . '</p>
                     </a>
@@ -70,7 +70,7 @@
         style="background-image: url('/projects/test-project/thumbnail.png')"
         data-date-added=""
         data-date-updated="">
-        <a class="project-link" href="/projects/test-project/">
+        <a class="project-link" href="/projects/?name=test-project">
             <p class="text-size-large text-weight-medium">Question text</p>
             <p class="text-size-small text-align-right">Date added</p>
         </a>
