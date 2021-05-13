@@ -1,5 +1,5 @@
 <!-- projects content -->
-<main class="projects">
+<main id="projects">
     <?php
         //echo 'PHP' . phpversion();
 

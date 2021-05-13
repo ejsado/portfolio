@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Projects &rtrif; Eric J.S.</title>
+        <title>About &rtrif; Eric J.S.</title>
         <!-- styles -->
         <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,11 +17,11 @@
         <!-- index -->
         <div id="body-container">
             <?php 
-                include 'logo-header.php';
-                include 'actions.php';
-                $currentPage = "projects";
-                include 'nav.php';
-                include 'projects.php';
+                include '../logo-header.php';
+                include '../actions.php';
+                $currentPage = "adventures";
+                include '../nav.php';
+                include 'adventures.php';
             ?>
         </div>
     </body>
