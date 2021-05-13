@@ -1,5 +1,5 @@
 <!-- call to action content -->
-<div class="actions">
+<div id="actions">
     <p class="text-align-center">
         I'm looking for a full-time position in the GIS sector.
     </p>

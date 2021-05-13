@@ -48,6 +48,15 @@
                         </p>
                     </div>
                 </section>
+                <section>
+                    <a href="<?php echo $projectName ?>/full-map.png" id="full-map-image-link">
+                        <img src="<?php echo $projectName ?>/full-map.png" alt="Full map image">
+                    </a>
+                    <a href="" class="action-button solid">
+                        <span class="material-icons text-size-large vertical-align-sub">map</span>
+                        View the interactive map
+                    </a>
+                </section>
 
                 <?php include '../nav.php' ?>
             </main>

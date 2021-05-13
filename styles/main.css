@@ -113,12 +113,14 @@ header p {
     margin: 0.3rem;
 }
 /* call to actions */
-.actions p {
+#actions {
+    margin: 0 1rem;
+}
+#actions p {
     margin: 2.5rem 0 1rem 0;
 }
 .action-button {
     display: block;
-    width: 94vw;
     margin: 1rem auto;
     border-radius: 0.4rem;
     padding: 0.8rem;
@@ -321,4 +323,11 @@ nav {
 }
 #project-metadata div p:nth-child(2) {
     font-weight: 500;
+}
+#full-map-image-link {
+    display: block;
+    margin: 1rem 0;
+}
+#full-map-image-link img {
+    width: calc(100vw - 2rem);
 }
