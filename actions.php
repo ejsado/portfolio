@@ -7,7 +7,7 @@
         <span class="material-icons text-size-large vertical-align-sub">email</span>
         Send a message
     </a>
-    <a class="action-button outline" href="/contact/">
+    <a class="action-button outline" href="/contact/?form=request">
         <span class="material-icons text-size-large vertical-align-sub">description</span>
         Request a resume
     </a>

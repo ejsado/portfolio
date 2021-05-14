@@ -336,7 +336,21 @@ nav {
 }
 /* contact */
 #contact {
+    position: relative;
     margin-top: 1rem;
+}
+#alt-form-link {
+    position: absolute;
+    top: 5.2em;
+    width: 100%;
+}
+#alt-form-link div {
+    width: 90%;
+    max-width: 40em;
+    margin: 0 auto;
+}
+#alt-form-link div a {
+    margin-left: 1.6em;
 }
 #contact-iframe-container {
     height: 52em;
