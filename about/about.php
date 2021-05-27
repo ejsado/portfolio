@@ -8,8 +8,6 @@
         <p>
         The field of Geographic Information Systems allows me to use my web development knowledge to display environmental data in a meaningful way. I’m able to utilize my programming ability to solve and automate complex problems with spatial data. Creating eye-pleasing and user-friendly maps comes natural to me as my design experience directly correlates with the principles of cartography. My skills are a perfect blend for GIS and I truly enjoy it.
         </p>
-    </section>
-    <section id="expertise">
         <h2>Expertise</h2>
         <div class="list-columns">
             <ul>
@@ -34,35 +32,84 @@
             <div id="milestones">
                 <div>
                     <p>
-                        2021
+                    2021
                     </p>
                     <p>
-                        Milestone name
+                    Mapping Projects
                     </p>
                     <p>
-                        Milestone description that is a few lines long with words. It should be short but descriptive.
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        2021
-                    </p>
-                    <p>
-                        Milestone name
-                    </p>
-                    <p>
-                        Milestone description that is a few lines long with words. It should be short but descriptive.
+                    Personal projects to answer questions about spatial relationships, explore geographic data, and practice cartographic skills.
                     </p>
                 </div>
                 <div>
                     <p>
-                        2021
+                    2020 - 2021
                     </p>
                     <p>
-                        Milestone name
+                    GIS Specialization with UC Davis via Coursera
                     </p>
                     <p>
-                        Milestone description that is a few lines long with words. It should be short but descriptive.
+                    Four 4-week courses and one 8-week capstone project.
+                    </p>
+                    <ul>
+                        <li>
+                        Fundamentals of GIS
+                        </li>
+                        <li>
+                        GIS Data Formats, Design and Quality
+                        </li>
+                        <li>
+                        Geospatial and Environmental Analysis
+                        </li>
+                        <li>
+                        Imagery, Automation, and Applications
+                        </li>
+                        <li>
+                        Geospatial Analysis Project
+                        <ul>
+                            <li>
+                                This final project encapsulated the previous four courses.
+                            </li>
+                            <li>
+                                <a href="">You can view this project here.</a>
+                            </li>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>
+                    2019
+                    </p>
+                    <p>
+                    Road Trip Across North America
+                    </p>
+                    <p>
+                    I spent nearly a year camping in my truck across the US and Canada. I did plenty of hiking, biking, rock climbing, surfing, and sightseeing. A majority of the trip is <a href="https://www.instagram.com/maryunleashed/">chronicled on my Instagram</a>.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                    2011 - 2018
+                    </p>
+                    <p>
+                    Web Developer/Designer at JP Morgan Chase
+                    </p>
+                    <ul>
+                        <li>Designed and developed UI for internal banking applications</li>
+                        <li>Lead designer for multiple projects in their transition to a web-based interface</li>
+                        <li>Collaborated with design team to align with company standards for branding</li>
+                        <li>Cooperated with users to fine-tune interaction experiences</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>
+                    2007 - 2011
+                    </p>
+                    <p>
+                    Bachelor of Arts in Computer Science at University of Delaware
+                    </p>
+                    <p>
+                    Minor in Interactive Media
                     </p>
                 </div>
             </div>

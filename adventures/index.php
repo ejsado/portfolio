@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About &rtrif; Eric J.S.</title>
+        <title>Adventures &rtrif; Eric J.S.</title>
         <?php include '../head-links.php' ?>
     </head>
     <body>

@@ -2,7 +2,7 @@
 body {
     background: #D8DACC;
     font-family: 'Heebo', Arial, Helvetica, sans-serif;
-    color: rgba(0,0,0,0.7);
+    color: rgba(0,0,0,0.8);
     font-size: 1rem;
     font-weight: 400;
 }
@@ -13,11 +13,22 @@ h1 {
     line-height: 2.4rem;
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 300;
     text-transform: uppercase;
-    color: #7E6557;
+    color: #573d2f;
     margin: 0 0 1rem;
+}
+h3 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #573d2f;
+    margin: 0 0 1rem;
+}
+hr {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #FFF;
+    margin: 1.5rem 0;
 }
 .text-weight-light {
     font-weight: 300;
@@ -54,6 +65,19 @@ h2 {
 }
 .vertical-align-sub {
     vertical-align: sub;
+}
+/* tables */
+table {
+    text-align: left;
+}
+table td, table th {
+    padding: 0.4rem 1.5rem 0.4rem 0;
+}
+table thead tr {
+    border-bottom: 2px solid #333;
+}
+table tbody tr {
+    border-top: 1px solid #333;
 }
 /* top and bottom graphics */
 #body-container {
@@ -116,20 +140,29 @@ header p {
     margin: 0.3rem;
 }
 /* call to actions */
-#actions {
-    margin: 0 1rem;
-}
 #actions p {
-    margin: 2.5rem 0 1rem 0;
+    margin: 2.5rem 1rem 1rem;
+}
+#action-container {
+    margin: 0 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.button-container {
+    flex-grow: 1;
+    margin: 0.5rem;
+    min-width: 20rem;
+    max-width: 30rem;
 }
 .action-button {
     display: block;
-    margin: 1rem auto;
     border-radius: 0.4rem;
     padding: 0.8rem;
     text-decoration: none;
     text-align: center;
     font-weight: 500;
+    border: 2px solid transparent;
 }
 .action-button.solid {
     background: #6A8253;
@@ -163,20 +196,22 @@ nav {
 #projects {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 .project-thumbnail {
+    margin: 0 0.5rem;
     flex-grow: 1;
-    margin: 0 auto 1rem;
+    height: 20rem;
+    width: 20rem;
     border-radius: 0.4rem;
     border: 1px solid #FFF;
     background-size: cover;
 }
 .project-link {
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: flex-end;
-    height: 60vw;
     border-radius: 0.4rem;
     text-decoration: none;
     background-image: linear-gradient(
@@ -195,10 +230,24 @@ nav {
 }
 /* about */
 #about {
-    margin: 0 1rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80rem;
 }
 #about section {
+    flex-grow: 1;
+    flex-basis: 25rem;
+    margin-right: 2rem;
     margin-bottom: 2rem;
+}
+#description p:first-of-type {
+    margin-top: 0;
+}
+#description h2 {
+    margin-top: 2rem;
 }
 #description img {
     float: left;
@@ -207,21 +256,21 @@ nav {
     border-radius: 0.3rem;
     border: 1px solid rgba(255,255,255,0.5);
 }
-#expertise .list-columns {
+#description .list-columns {
     display: flex;
 }
-#expertise .list-columns ul {
+#description .list-columns ul {
     margin: 0;
     padding: 0;
     flex-grow: 1;
 }
-#expertise .list-columns ul li {
+#description .list-columns ul li {
     list-style-type: none;
     margin: 0 0 0.2rem;
     padding: 0;
     font-weight: 500
 }
-#expertise .list-columns ul li:first-child {
+#description .list-columns ul li:first-child {
     font-weight: 400;
     opacity: 0.6;
     font-size: 0.9rem;
@@ -299,11 +348,8 @@ nav {
 #milestones div p:nth-child(2) {
     font-weight: 700;
 }
-/* adventures */
-#adventures {
-    margin: 0 1rem;
-    display: flex;
-    justify-content: center;
+#milestones div ul {
+    margin-top: 0;
 }
 /* 404 page */
 #lost {
@@ -312,7 +358,9 @@ nav {
 }
 /* project details */
 #project-info {
-    margin: 0 1rem;
+    padding: 0 1rem;
+    max-width: 50rem;
+    margin: 0 auto;
 }
 #project-metadata {
     display: flex;
@@ -322,7 +370,8 @@ nav {
     margin: 0;
 }
 #project-metadata div p:first-child {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
 }
 #project-metadata div p:nth-child(2) {
     font-weight: 500;
@@ -332,7 +381,13 @@ nav {
     margin: 1rem 0;
 }
 #full-map-image-link img {
-    width: calc(100vw - 2rem);
+    width: 100%;
+}
+#project-info h2 {
+    margin-top: 2.5rem;
+}
+#project-info h3 {
+    margin-top: 1.5rem;
 }
 /* contact */
 #contact {
@@ -353,6 +408,39 @@ nav {
     margin-left: 1.6em;
 }
 #contact-iframe-container {
-    height: 52em;
+    height: 75em;
 }
+/* adventures */
+#adventures {
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    max-width: 63rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 330rem;
+}
+#adventures section {
+    margin: 0 0.5rem 1rem;
+    width: calc(100% - 1rem);
+    max-width: 30rem;
+    min-height: 37rem;
+}
+@media (min-width: 44rem) {
+    #adventures {
+        height: 180rem;
+        align-items: stretch;
+    }
+    #adventures section {
+        width: auto;
+    }
+    #adventures section:nth-child(2n+1) {
+        order: 1;
+    }
+    #adventures section:nth-child(2n) {
+        order: 2;
+    }
+}
+
 

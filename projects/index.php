@@ -1,4 +1,6 @@
 <?php
+    include '../utility/parsedown-1.7.4/Parsedown.php';
+
     $projectName = $_GET["name"];
     $formattedName = ucwords(str_replace("-", " ", $projectName));
     include $projectName . '/metadata.php';
@@ -56,6 +58,13 @@
                         <span class="material-icons text-size-large vertical-align-sub">map</span>
                         View the interactive map
                     </a>
+                </section>
+                <section>
+                    <?php 
+                        $projectReport = file_get_contents($projectName . '/project-report.md');
+                        $Parsedown = new Parsedown();
+                        echo $Parsedown->text($projectReport);
+                    ?>
                 </section>
 
                 <?php include '../nav.php' ?>
