@@ -411,9 +411,28 @@ nav {
     height: 75em;
 }
 /* adventures */
-#adventures {
+#instagram-embed {
     max-width: 80rem;
     margin: 0 auto;
+    position: relative;
 }
+#instagram-embed::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: calc(100% - 1.2rem);
+    height: 4.3rem;
+    margin: -0.4rem 0.6rem 0;
+    background: #FFF;
+    border-radius: 8px;
+}
+@media (min-width: 28rem) {
+    #instagram-embed::before {
+        width: 26rem;
+        left: calc(50% - 13.6rem);
+        height: 4rem;
+    }
+}
+
 
 
