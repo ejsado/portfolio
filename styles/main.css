@@ -412,35 +412,8 @@ nav {
 }
 /* adventures */
 #adventures {
+    max-width: 80rem;
     margin: 0 auto;
-    padding: 0 0.5rem;
-    max-width: 63rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 330rem;
-}
-#adventures section {
-    margin: 0 0.5rem 1rem;
-    width: calc(100% - 1rem);
-    max-width: 30rem;
-    min-height: 37rem;
-}
-@media (min-width: 44rem) {
-    #adventures {
-        height: 180rem;
-        align-items: stretch;
-    }
-    #adventures section {
-        width: auto;
-    }
-    #adventures section:nth-child(2n+1) {
-        order: 1;
-    }
-    #adventures section:nth-child(2n) {
-        order: 2;
-    }
 }
 
 
