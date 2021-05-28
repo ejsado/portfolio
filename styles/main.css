@@ -438,22 +438,9 @@ nav {
     }
 }
 /* contact */
-#contact {
-    position: relative;
-    margin-top: 1rem;
-}
 #alt-form-link {
-    position: absolute;
-    top: 5.2em;
-    width: 100%;
-}
-#alt-form-link div {
-    width: 90%;
-    max-width: 40em;
-    margin: 0 auto;
-}
-#alt-form-link div a {
-    margin-left: 1.6em;
+    margin: 0 auto 1rem;
+    max-width: 24rem;
 }
 #contact-iframe-container {
     height: 80rem;
@@ -464,20 +451,30 @@ nav {
     transform-origin: 0 0;
 }
 /* adventures */
-#instagram-embed {
+#adventures {
     position: relative;
+}
+#instagram-embed-bg {
+    position: absolute;
+    height: 4rem;
+    width: 100%;
+    top: -0.4rem;
+}
+#instagram-embed-bg::before {
+    content: "";
+    display: block;
+    background: #FFF;
+    border-radius: 0.4rem;
+    width: 100%;
+    max-width: 26rem;
+    height: 4rem;
+    margin: 0 auto;
+}
+#instagram-embed {
     width: 50vw;
     transform: scale(2);
     transform-origin: 0 0;
 }
-@media (min-width: 28rem) {
-    #instagram-embed::before {
-        width: 26rem;
-        left: calc(50% - 13.6rem);
-        height: 4rem;
-    }
-}
-
 /* desktop media query */
 @media (max-resolution: 192dpi), (-webkit-max-device-pixel-ratio: 2), (min-aspect-ratio: 1/1)  {
     html {

@@ -11,18 +11,17 @@
         <!-- index -->
         <div id="body-container">
             <?php include '../logo-header.php' ?>
+            <?php include '../nav.php' ?>
             <main id="contact">
-                <!--<section id="alt-form-link">
-                    <div>
+                <section id="alt-form-link">
                     <?php
                         if($formType == "resume") {
-                            echo '<a href="./">Want to send a general message instead?</a>';
+                            echo '<a class="action-button outline" href="./">Want to send a general message instead?</a>';
                         } else {
-                            echo '<a href="./?form=resume">Want to request a resume instead?</a>';
+                            echo '<a class="action-button outline" href="./?form=resume">Want to request a resume instead?</a>';
                         }
                     ?>
-                    </div>
-                </section>-->
+                </section>
                 <section id="contact-iframe-container">
                     <?php
                         if($formType == "resume") {
@@ -33,7 +32,6 @@
                     ?>
                 </section>
             </main>
-            <?php include '../nav.php' ?>
         </div>
     </body>
 </html>
