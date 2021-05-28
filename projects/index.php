@@ -4,7 +4,7 @@
     $projectName = $_GET["name"];
     $formattedName = ucwords(str_replace("-", " ", $projectName));
     include $projectName . '/metadata.php';
-    // question
+    // title
     // dateAdded
     // dateUpdated
 ?>
@@ -30,36 +30,40 @@
             </header>
             <main id="project-info">
                 <h1>
-                    <?php echo $question ?>
+                    <?php echo $title ?>
                 </h1>
                 <section id="project-metadata">
-                    <div>
-                        <p>Created by</p>
-                        <p>Eric J.S.</p>
+                    <div id="project-details">
+                        <div>
+                            <p>Created by</p>
+                            <p>Eric J.S.</p>
+                        </div>
+                        <div>
+                            <p>Added</p>
+                            <p>
+                                <?php echo date("F j, Y", $dateAdded) ?>
+                            </p>
+                        </div>
+                        <div>
+                            <p>Last updated</p>
+                            <p>
+                                <?php echo date("F j, Y", $dateUpdated) ?>
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <p>Added</p>
-                        <p>
-                            <?php echo date("F j, Y", $dateAdded) ?>
-                        </p>
+                    <div id="project-map">
+                        <a href="<?php echo $projectName ?>/full-map.png" id="full-map-image-link">
+                            <img src="<?php echo $projectName ?>/full-map.png" alt="Full map image">
+                        </a>
                     </div>
-                    <div>
-                        <p>Last updated</p>
-                        <p>
-                            <?php echo date("F j, Y", $dateUpdated) ?>
-                        </p>
+                    <div id="project-button">
+                        <a href="" class="action-button solid">
+                            <span class="material-icons text-size-large vertical-align-sub">map</span>
+                            View the interactive map
+                        </a>
                     </div>
                 </section>
-                <section>
-                    <a href="<?php echo $projectName ?>/full-map.png" id="full-map-image-link">
-                        <img src="<?php echo $projectName ?>/full-map.png" alt="Full map image">
-                    </a>
-                    <a href="" class="action-button solid">
-                        <span class="material-icons text-size-large vertical-align-sub">map</span>
-                        View the interactive map
-                    </a>
-                </section>
-                <section>
+                <section id="project-report">
                     <?php 
                         $projectReport = file_get_contents($projectName . '/project-report.md');
                         $Parsedown = new Parsedown();

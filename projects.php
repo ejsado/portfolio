@@ -10,12 +10,12 @@
         // define project thumbnail element metadata
         class ProjectThumbnail {
             public $name;
-            public $question;
+            public $title;
             public $dateAdded;
             public $dateUpdated;
-            public function __construct($name, $question, $dateAdded, $dateUpdated) {
+            public function __construct($name, $title, $dateAdded, $dateUpdated) {
                 $this->name = $name;
-                $this->question = $question;
+                $this->title = $title;
                 $this->dateAdded = $dateAdded;
                 $this->dateUpdated = $dateUpdated;
             }
@@ -36,13 +36,13 @@
             // if the file name does not contain a dot, consider it a directory and continue
             if(gettype(strpos($projectRef, '.')) == 'boolean') {
                 // set default values
-                $question = 'Placeholder map title';
+                $title = 'Placeholder map title';
                 $dateAdded = time();
                 $dateUpdated = time();
                 // inject metadata file, which should overwrite above variables
                 include 'projects/' . $projectRef . '/metadata.php';
                 // create new projectThumnail with this metadata and push it to the projects array
-                array_push($projects, new ProjectThumbnail($projectRef, $question, $dateAdded, $dateUpdated));
+                array_push($projects, new ProjectThumbnail($projectRef, $title, $dateAdded, $dateUpdated));
                 // get the current index and add it to the dates to make sure they are unique
                 $projectsLength = count($projects) - 1;
                 $projects[$projectsLength]->addToDate($projectsLength);
@@ -59,7 +59,7 @@
                     data-date-added="' . $thumbnail->dateAdded . '"
                     data-date-updated="' . $thumbnail->dateUpdated . '">
                     <a class="project-link" href="/projects/?name=' . $thumbnail->name . '">
-                        <p class="text-size-large text-weight-medium">' . $thumbnail->question . '</p>
+                        <p class="text-size-large text-weight-medium">' . $thumbnail->title . '</p>
                         <p class="text-size-small text-align-right">' . date("F j, Y", $thumbnail->dateUpdated) . '</p>
                     </a>
                 </section>';
@@ -71,7 +71,7 @@
         data-date-added=""
         data-date-updated="">
         <a class="project-link" href="/projects/?name=test-project">
-            <p class="text-size-large text-weight-medium">Question text</p>
+            <p class="text-size-large text-weight-medium">Title text</p>
             <p class="text-size-small text-align-right">Date added</p>
         </a>
     </section>
