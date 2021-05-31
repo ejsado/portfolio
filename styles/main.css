@@ -201,13 +201,16 @@ nav {
 #projects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 0 0.5rem;
 }
 .project-thumbnail {
-    margin: 0 0.5rem;
+    margin: 0 0.5rem 1rem;
     flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 28rem;
+    max-width: 40rem;
     height: 20rem;
-    width: 20rem;
     border-radius: 0.4rem;
     border: 1px solid #FFF;
     background-size: cover;
@@ -389,6 +392,9 @@ nav {
 #full-map-image-link img {
     width: 100%;
 }
+#project-buttons .action-button {
+    margin-bottom: 0.5rem;
+}
 #project-info h2 {
     margin-top: 2.5rem;
 }
@@ -398,43 +404,39 @@ nav {
 #project-report {
     max-width: 50rem;
 }
+#project-report img {
+    width: 100%;
+    max-width: 40rem;
+}
 @media (min-width: 50rem) {
     #project-metadata {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        align-content: flex-end;
-        flex-direction: column;
-        height: 40vmin;
-    }
-    #project-metadata::after {
-        content: "";
-        flex-basis: 100%;
-        width: 0;
-        order: 2;
-    }
-    #project-details, #project-button {
-        width: 20rem;
+        display: grid;
+        align-items: start;
+        gap: 1rem;
+        grid-template-columns: auto 20rem;
+        grid-template-rows: 0fr 1fr;
+        grid-template-areas:
+            "map details"
+            "map buttons";
+        
     }
     #project-details {
+        grid-area: details;
         flex-direction: column;
-        order: 3;
-        margin-bottom: 1rem;
     }
     #project-details div {
-        margin: 0.4rem 0;
+        margin-bottom: 0.5rem;
+    }
+    #project-map {
+        grid-area: map;
+        max-height: 30rem;
+        overflow: hidden;
     }
     #full-map-image-link {
         margin: 0;
     }
-    #project-map {
-        order: 1;
-        width: calc(100% - 20rem);
-        overflow: hidden;
-        padding-right: 1rem;
-    }
-    #project-button {
-        order: 3;
+    #project-buttons {
+        grid-area: buttons;
     }
 }
 /* contact */
@@ -451,30 +453,7 @@ nav {
     transform-origin: 0 0;
 }
 /* adventures */
-#adventures {
-    position: relative;
-}
-#instagram-embed-bg {
-    position: absolute;
-    height: 4rem;
-    width: 100%;
-    top: -0.4rem;
-}
-#instagram-embed-bg::before {
-    content: "";
-    display: block;
-    background: #FFF;
-    border-radius: 0.4rem;
-    width: 100%;
-    max-width: 26rem;
-    height: 4rem;
-    margin: 0 auto;
-}
-#instagram-embed {
-    width: 50vw;
-    transform: scale(2);
-    transform-origin: 0 0;
-}
+
 /* desktop media query */
 @media (max-resolution: 192dpi), (-webkit-max-device-pixel-ratio: 2), (min-aspect-ratio: 1/1)  {
     html {
@@ -483,11 +462,5 @@ nav {
     #contact-iframe {
         transform: none;
         width: 100%;
-    }
-    #instagram-embed {
-        transform: none;
-        width: 100%;
-        max-width: 80rem;
-        margin: 0 auto;
     }
 }

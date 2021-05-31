@@ -24,7 +24,7 @@
                 $this->dateUpdated += $num;
             }
             static function compareDateAdded($a, $b) {
-                return $a->dateAdded - $b->dateAdded;
+                return $b->dateAdded - $a->dateAdded;
             }
         }
 

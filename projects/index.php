@@ -7,6 +7,9 @@
     // title
     // dateAdded
     // dateUpdated
+    // staticMap
+    // interactiveMap
+    $projectDirectory = $projectName . "/";
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,15 +55,39 @@
                         </div>
                     </div>
                     <div id="project-map">
-                        <a href="<?php echo $projectName ?>/full-map.png" id="full-map-image-link">
-                            <img src="<?php echo $projectName ?>/full-map.png" alt="Full map image">
+                        <?php
+                            if ($interactiveMap != "") {
+                                $imageLink = $projectDirectory . $interactiveMap;
+                            } else {
+                                $imageLink = $projectDirectory . $staticMap;
+                            }
+                        ?>
+                        <a href="<?php echo $imageLink ?>" id="full-map-image-link">
+                            <img src="<?php echo $projectDirectory ?>full-map.png" alt="Full map image">
                         </a>
                     </div>
-                    <div id="project-button">
-                        <a href="" class="action-button solid">
-                            <span class="material-icons text-size-large vertical-align-sub">map</span>
-                            View the interactive map
-                        </a>
+                    <div id="project-buttons">
+                        <?php
+                            if ($interactiveMap != "") {
+                                echo '<a href="' . $interactiveMap . '" class="action-button solid">
+                                        <span class="material-icons text-size-large vertical-align-sub">map</span>
+                                        View the interactive map
+                                    </a>';
+                            }
+                            if ($staticMap != "") {
+                                if (substr($staticMap, -3) == "pdf") {
+                                    echo '<a href="' . $projectDirectory . $staticMap . '" class="action-button outline">
+                                            <span class="material-icons text-size-large vertical-align-sub">description</span>
+                                            View the PDF map
+                                        </a>';
+                                } else {
+                                    echo '<a href="' . $projectDirectory . $staticMap . '" class="action-button outline">
+                                            <span class="material-icons text-size-large vertical-align-sub">image</span>
+                                            View the high resolution map
+                                        </a>';
+                                }
+                            }
+                        ?>
                     </div>
                 </section>
                 <section id="project-report">
