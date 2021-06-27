@@ -219,22 +219,34 @@ nav {
     display: flex;
     height: 100%;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     border-radius: 0.4rem;
     text-decoration: none;
-    background-image: linear-gradient(
-        rgba(0,0,0,0) 50%,
-        rgba(50,50,50,0.9)
-    );
 }
-.project-link p {
-    margin: 0 1rem;
+.project-link div p {
+    margin: 0;
     line-height: 1.5rem;
-    color: #FFF;
-    text-shadow: rgba(0,0,0,1) 1px 1px 4px;
+    color: #000;
+    text-shadow: #FFF 0 0 4px;
 }
-.project-link p + p {
-    margin-bottom: 0.6rem;
+.project-link div + div {
+    height: 4rem;
+    background-image: linear-gradient(
+        rgba(255,255,255,0.9),
+        rgba(255,255,255,1)
+    );
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.project-link div:first-child p {
+    float: right;
+    background: rgba(255,255,255,0.8);
+    padding: 0 0.3rem;
+    border-radius: 0 0.3rem;
+}
+.project-link div + div p {
+    margin: 0 0.5rem;
 }
 /* about */
 #about {
@@ -473,7 +485,7 @@ nav {
 }
 #instagram-badge img {
     width: 5rem;
-    margin-right: 1rem;
+    margin-right: 1.2rem;
 }
 #instagram-badge p {
     margin: 0 0 0.5rem;

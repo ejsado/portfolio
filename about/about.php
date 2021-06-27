@@ -71,7 +71,7 @@
                                 This final project encapsulated the previous four courses.
                             </li>
                             <li>
-                                <a href="">You can view this project here</a>.
+                                <a href="/projects/?name=florida-sea-levels">You can view this project here</a>.
                             </li>
                         </li>
                     </ul>

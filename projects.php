@@ -59,8 +59,12 @@
                     data-date-added="' . $thumbnail->dateAdded . '"
                     data-date-updated="' . $thumbnail->dateUpdated . '">
                     <a class="project-link" href="/projects/?name=' . $thumbnail->name . '">
-                        <p class="text-size-large text-weight-medium">' . $thumbnail->title . '</p>
-                        <p class="text-size-small text-align-right">' . date("F j, Y", $thumbnail->dateUpdated) . '</p>
+                        <div>
+                            <p class="text-size-small text-align-right">' . date("F j, Y", $thumbnail->dateUpdated) . '</p>
+                        </div>
+                        <div>
+                            <p class="text-size-large text-weight-medium">' . $thumbnail->title . '</p>
+                        </div>
                     </a>
                 </section>';
         }
@@ -71,8 +75,8 @@
         data-date-added=""
         data-date-updated="">
         <a class="project-link" href="/projects/?name=test-project">
-            <p class="text-size-large text-weight-medium">Title text</p>
             <p class="text-size-small text-align-right">Date added</p>
+            <p class="text-size-large text-weight-medium">Title text</p>
         </a>
     </section>
     -->
