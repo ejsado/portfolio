@@ -420,6 +420,12 @@ nav {
     width: 100%;
     max-width: 40rem;
 }
+#project-report small {
+    display: block;
+    max-width: 40rem;
+    padding: 1rem 0.5rem;
+    background: rgba(255,255,255,0.5);
+}
 @media
     (min-aspect-ratio: 1/1),
     (min-width: 50rem) and (max-resolution: 192dpi),
@@ -430,11 +436,10 @@ nav {
         align-items: start;
         gap: 1rem;
         grid-template-columns: auto 20rem;
-        grid-template-rows: 0fr 1fr;
+        grid-template-rows: auto max-content;
         grid-template-areas:
             "map details"
             "map buttons";
-        
     }
     #project-details {
         grid-area: details;
@@ -445,7 +450,7 @@ nav {
     }
     #project-map {
         grid-area: map;
-        max-height: 30rem;
+        max-height: 32rem;
         overflow: hidden;
     }
     #full-map-image-link {

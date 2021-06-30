@@ -4,7 +4,7 @@ After living in Southern Delaware for a significant portion of my life, as well 
 
 ---
 
-## Results
+## Analysis
 
 My data is far from scientific, but the map makes it clear: most of Delaware’s parks are in New Castle County. Delaware only has three counties: New Castle, Kent, and Sussex. New Castle contains most of Delaware’s population so it makes sense that they would have the most tax revenue to build parks with amenities. Kent and Sussex have a few large State Parks, but these are paid entry and are usually crowded. Small parks with walking trails are nearly non-existent in these counties.
 

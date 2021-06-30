@@ -2,7 +2,11 @@
     include '../utility/parsedown-1.7.4/Parsedown.php';
 
     $projectName = $_GET["name"];
-    $formattedName = ucwords(str_replace("-", " ", $projectName));
+    $searchArray = array("-", "us");
+    $replaceArray = array(" ", "U.S.");
+    $formattedName = str_replace($searchArray, $replaceArray, $projectName);
+    $formattedName = ucwords($formattedName);
+
     include $projectName . '/metadata.php';
     // title
     // dateAdded
@@ -63,7 +67,7 @@
                             }
                         ?>
                         <a href="<?php echo $imageLink ?>" id="full-map-image-link">
-                            <img src="<?php echo $projectDirectory ?>full-map.png" alt="Full map image">
+                            <img src="<?php echo $projectDirectory ?>full-map-low-res.png" alt="Full map image">
                         </a>
                     </div>
                     <div id="project-buttons">
