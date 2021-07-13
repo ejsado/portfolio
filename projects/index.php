@@ -11,6 +11,7 @@
     // title
     // dateAdded
     // dateUpdated
+    // tools
     // staticMap
     // interactiveMap
     $projectDirectory = $projectName . "/";
@@ -46,7 +47,7 @@
                             <p>Eric J.S.</p>
                         </div>
                         <div>
-                            <p>Added</p>
+                            <p>Posted</p>
                             <p>
                                 <?php echo date("F j, Y", $dateAdded) ?>
                             </p>
@@ -55,6 +56,16 @@
                             <p>Last updated</p>
                             <p>
                                 <?php echo date("F j, Y", $dateUpdated) ?>
+                            </p>
+                        </div>
+                        <div>
+                            <p>Tools Used</p>
+                            <p>
+                            <?php
+                                foreach($tools as $tool) {
+                                    echo '<span>' . $tool . '</span>';
+                                }
+                            ?>
                             </p>
                         </div>
                     </div>

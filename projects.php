@@ -13,11 +13,12 @@
             public $title;
             public $dateAdded;
             public $dateUpdated;
-            public function __construct($name, $title, $dateAdded, $dateUpdated) {
+            public function __construct($name, $title, $dateAdded, $dateUpdated, $tools) {
                 $this->name = $name;
                 $this->title = $title;
                 $this->dateAdded = $dateAdded;
                 $this->dateUpdated = $dateUpdated;
+                $this->tools = $tools;
             }
             public function addToDate($num) {
                 $this->dateAdded += $num;
@@ -42,7 +43,7 @@
                 // inject metadata file, which should overwrite above variables
                 include 'projects/' . $projectRef . '/metadata.php';
                 // create new projectThumnail with this metadata and push it to the projects array
-                array_push($projects, new ProjectThumbnail($projectRef, $title, $dateAdded, $dateUpdated));
+                array_push($projects, new ProjectThumbnail($projectRef, $title, $dateAdded, $dateUpdated, $tools));
                 // get the current index and add it to the dates to make sure they are unique
                 $projectsLength = count($projects) - 1;
                 $projects[$projectsLength]->addToDate($projectsLength);
@@ -54,30 +55,22 @@
 
         // output HTML for each project
         foreach($projects as $thumbnail) {
-            echo '<section class="project-thumbnail"
-                    style="background-image: url(/projects/' . $thumbnail->name . '/thumbnail.png)"
-                    data-date-added="' . $thumbnail->dateAdded . '"
-                    data-date-updated="' . $thumbnail->dateUpdated . '">
-                    <a class="project-link" href="/projects/?name=' . $thumbnail->name . '">
-                        <div>
-                            <p class="text-size-small text-align-right">' . date("F j, Y", $thumbnail->dateUpdated) . '</p>
-                        </div>
-                        <div>
-                            <p class="text-size-large text-weight-medium">' . $thumbnail->title . '</p>
-                        </div>
-                    </a>
-                </section>';
+            echo    '<section class="project-thumbnail"
+                        style="background-image: url(/projects/' . $thumbnail->name . '/thumbnail.png)"
+                        data-date-added="' . $thumbnail->dateAdded . '"
+                        data-date-updated="' . $thumbnail->dateUpdated . '">
+                        <a class="project-link" href="/projects/?name=' . $thumbnail->name . '">
+                            <div class="project-space"></div>
+                            <div class="project-tools">';
+            foreach($thumbnail->tools as $tool) {
+                echo '          <span>' . $tool . '</span>';
+            }
+            echo            '</div>
+                            <div class="project-title">
+                                <p class="text-size-large text-weight-medium">' . $thumbnail->title . '</p>
+                            </div>
+                        </a>
+                    </section>';
         }
     ?>
-    <!--
-    <section class="project-thumbnail"
-        style="background-image: url('/projects/test-project/thumbnail.png')"
-        data-date-added=""
-        data-date-updated="">
-        <a class="project-link" href="/projects/?name=test-project">
-            <p class="text-size-small text-align-right">Date added</p>
-            <p class="text-size-large text-weight-medium">Title text</p>
-        </a>
-    </section>
-    -->
 </main>

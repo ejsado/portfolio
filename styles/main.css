@@ -221,7 +221,6 @@ nav {
     max-width: 40rem;
     height: 20rem;
     border-radius: 0.4rem;
-    border: 1px solid #FFF;
     background-size: cover;
 }
 .project-link {
@@ -238,10 +237,26 @@ nav {
     color: #000;
     text-shadow: #FFF 0 0 4px;
 }
-.project-link div + div {
+.project-link .project-space {
+    flex-grow: 1;
+}
+.project-link .project-tools {
+    align-self: flex-end;
+    padding: 0 0.3rem 0.2rem 0;
+}
+.project-link .project-tools span {
+    color: #FFF;
+    background: rgba(70,70,70,0.9);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    border-radius: 0.2rem;
+    padding: 0 0.3rem;
+    margin: 0;
+}
+.project-link .project-title {
     height: 4rem;
     background-image: linear-gradient(
-        rgba(255,255,255,0.9),
+        rgba(255,255,255,0.8),
         rgba(255,255,255,1)
     );
     display: flex;
@@ -249,14 +264,8 @@ nav {
     flex-direction: column;
     border-radius: 0 0 0.3rem 0.3rem;
 }
-.project-link div:first-child p {
-    float: right;
-    background: rgba(255,255,255,0.8);
-    padding: 0 0.3rem;
-    border-radius: 0 0.3rem;
-}
-.project-link div + div p {
-    margin: 0 0.5rem;
+.project-link .project-title p {
+    margin: 0 0.6rem;
 }
 /* about */
 #about {
@@ -393,20 +402,27 @@ nav {
 }
 #project-details {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     background: rgba(255,255,255,0.3);
     padding: 0.5rem;
     border-radius: 0.4rem;
 }
+#project-details div {
+    flex-grow: 1;
+    padding-right: 1rem;
+}
 #project-details div p {
     margin: 0;
+    font-weight: 500;
+}
+#project-details div p span ~ span::before {
+    content: ", ";
 }
 #project-details div p:first-child {
+    font-weight: 400;
     font-size: 0.7rem;
     text-transform: uppercase;
-}
-#project-details div p:nth-child(2) {
-    font-weight: 500;
 }
 #full-map-image-link {
     display: block;
