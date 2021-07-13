@@ -36,7 +36,6 @@ To produce a more visually appealing map, I “blurred” the data slightly by a
 
 ## Data Sources
 
-The US Forest Service provides data on individual tree species and tree totals for the contiguous US. The data I used was from 2012.
-
+The US Forest Service provides data on individual tree species and tree totals for the contiguous US. The data I used was from 2012.  
 https://www.fs.fed.us/foresthealth/applied-sciences/mapping-reporting/indiv-tree-parameter-maps.shtml
 

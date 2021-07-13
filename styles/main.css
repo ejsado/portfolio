@@ -9,6 +9,12 @@ body {
     font-weight: 400;
 }
 /* font styles */
+a {
+    color: #0d7600;
+}
+a:visited {
+    color: #922b0f;
+}
 h1 {
     font-weight: 500;
     font-size: 2rem;
@@ -190,6 +196,9 @@ nav {
     border-radius: 1.3rem;
     text-decoration: underline rgba(0,0,0,0.3);
 }
+.pill-button:visited {
+    color: rgba(0,0,0,0.6);
+}
 .pill-button.current-page {
     background: rgba(0,0,0,0.5);
     color: #FFF;
@@ -238,6 +247,7 @@ nav {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    border-radius: 0 0 0.3rem 0.3rem;
 }
 .project-link div:first-child p {
     float: right;
@@ -368,6 +378,7 @@ nav {
 }
 #milestones div ul {
     margin-top: 0;
+    margin-bottom: 0;
 }
 /* 404 page */
 #lost {
