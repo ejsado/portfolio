@@ -72,7 +72,7 @@
                     <div id="project-map">
                         <?php
                             if ($interactiveMap != "") {
-                                $imageLink = $projectDirectory . $interactiveMap;
+                                $imageLink = $interactiveMap;
                             } else {
                                 $imageLink = $projectDirectory . $staticMap;
                             }

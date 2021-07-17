@@ -1,0 +1,31 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+#map-container {
+	width: 100vw;
+	height: 100%;
+}
+#map-title {
+	margin-right: 3rem;
+}
+#map-title h1 {
+	font-size: calc(0.8rem + 1vmin);
+	line-height: 1.4;
+	margin: 0.5rem 1rem;
+}
+#project-link a {
+	display: block;
+	font-size: calc(0.6rem + 0.5vmin);
+	line-height: 1.4;
+	margin: 0.5rem 1rem;
+}
+#logo-link-small {
+	display: block;
+	margin: 0.6rem;
+}
+#logo-svg-small {
+	width: calc(4rem + 4vmin);
+	height: auto;
+}
