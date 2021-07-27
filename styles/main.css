@@ -231,18 +231,14 @@ nav {
     border-radius: 0.4rem;
     text-decoration: none;
 }
-.project-link div p {
-    margin: 0;
-    line-height: 1.5rem;
-    color: #000;
-    text-shadow: #FFF 0 0 4px;
-}
 .project-link .project-space {
     flex-grow: 1;
 }
 .project-link .project-tools {
-    align-self: flex-end;
-    padding: 0 0.3rem 0.2rem 0;
+    padding: 0 0.2rem 0.2rem 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
 }
 .project-link .project-tools span {
     color: #FFF;
@@ -251,7 +247,7 @@ nav {
     text-transform: uppercase;
     border-radius: 0.2rem;
     padding: 0 0.3rem;
-    margin: 0;
+    margin: 0.1rem;
 }
 .project-link .project-title {
     height: 4rem;
@@ -266,6 +262,9 @@ nav {
 }
 .project-link .project-title p {
     margin: 0 0.6rem;
+    line-height: 1.5rem;
+    color: #000;
+    text-shadow: #FFF 0 0 4px;
 }
 /* about */
 #about {

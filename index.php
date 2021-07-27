@@ -17,7 +17,7 @@
                 include 'actions.php';
                 $currentPage = "projects";
                 include 'nav.php';
-                include 'projects.php';
+                include 'project-gallery.php';
 				include 'footer.php';
             ?>
         </div>

@@ -62,7 +62,8 @@
                         <a class="project-link" href="/projects/?name=' . $thumbnail->name . '">
                             <div class="project-space"></div>
                             <div class="project-tools">';
-            foreach($thumbnail->tools as $tool) {
+			$reversedTools = array_reverse($thumbnail->tools);
+            foreach($reversedTools as $tool) {
                 echo '          <span>' . $tool . '</span>';
             }
             echo            '</div>
