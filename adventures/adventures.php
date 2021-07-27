@@ -31,15 +31,12 @@
             foreach($directoryContents as $imageRef) {
                 if($imageRef != "." && $imageRef != "..") {
                     echo '<div class="photo-container" style="background-image: url(\'' . $photosPath . $imageRef . '\')">
-                        <img class="photo-image" src="' . $photosPath . $imageRef . '" alt="Instagram highlight" loading="lazy">
+                        <a href="https://www.instagram.com/maryunleashed/">
+							<img class="photo-image" src="' . $photosPath . $imageRef . '" alt="Instagram highlight" loading="lazy">
+						</a>
                     </div>';
                 }
             }
         ?>
-        <!--
-        <div class="photo-container">
-            <img class="photo-image" src="" alt="Instagram highlight" loading="lazy">
-        </div>
-        -->
     </section>
 </main>

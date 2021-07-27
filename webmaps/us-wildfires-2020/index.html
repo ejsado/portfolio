@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>US Wildfires 2020: Interactive Map &rtrif; Eric J.S.</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://js.arcgis.com/4.20/esri/themes/light/main.css">
+		<link rel="stylesheet" href="/styles/webmap.css">
+        <script src="https://js.arcgis.com/4.20/"></script>
+        <script>
+            require([
+				"esri/config",
+				"esri/WebScene",
+				"esri/views/SceneView",
+				"esri/widgets/ScaleBar",
+      			"esri/widgets/Legend",
+				"esri/widgets/Expand"
+			], function (
+				esriConfig,
+				WebScene,
+				SceneView,
+				ScaleBar,
+				Legend,
+				Expand
+			){
+				esriConfig.apiKey = "AAPK0efec420f69f4e368735408b2dcf3dd2m3OpefIcFYbjVCGgqCAwiaMxJX2osKC57T45H-TK_3JEapFIVgiY4TtQU7mvvfrn";
+				
+				const webscene = new WebScene({
+					portalItem: {
+						id: "ad81e86a36de4e5792fdd7bec738d381"
+					}
+				});
+				
+				const view = new SceneView({
+					map: webscene,
+					container: "map-container", // div element
+					constraints: {
+						altitude: {
+							min: 10000
+						},
+						tilt: {
+							max: 0.5
+						}
+					}
+				});
+
+				view.ui.move("zoom", "bottom-right");
+				view.ui.move("compass", "bottom-right");
+				view.ui.remove("navigation-toggle");
+				view.ui.add("map-title", "top-left");
+				view.ui.add("project-link", "top-left");
+				view.ui.add("logo", "bottom-left");
+				
+            });
+        </script>
+    </head>
+    <body>
+        <div id="map-container"></div>
+		<div id="map-title" class="esri-widget">
+			<h1>US Wildfire Areas in 2020</h1>
+		</div>
+		<div id="project-link" class="esri-widget">
+			<a href="/projects/?name=us-wildfires-2020">More info about this project &raquo;</a>
+		</div>
+		<div id="logo" class="esri-widget">
+			<a href="/" id="logo-link-small">
+				<img
+					id="logo-svg-small"
+					src="/media/logo-initials-display.svg"
+					alt="Eric J.S."
+					height="153"
+					width="582"
+					/>
+            </a>
+		</div>
+    </body>
+</html>

@@ -6,6 +6,11 @@
     <head>
         <title>Contact &rtrif; Eric J.S.</title>
         <?php include '../head-links.php' ?>
+		<!-- page metadata --> 
+		<meta property="og:title" content="Contact Eric J.S." />
+		<meta property="og:description" content="Request a resume or send a general message." />
+		<meta property="og:url" content="https://www.ericjs.net/contact/" />
+		<?php include '../head-logo-metadata.php' ?>
     </head>
     <body>
         <!-- index -->
@@ -32,6 +37,7 @@
                     ?>
                 </section>
             </main>
+			<?php include '../footer.php'; ?>
         </div>
     </body>
 </html>

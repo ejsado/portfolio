@@ -21,6 +21,24 @@
     <head>
         <title><?php echo $formattedName ?> &rtrif; Eric J.S.</title>
         <?php include '../head-links.php' ?>
+		<meta property="og:title" content="<?php echo $formattedName ?> Map" />
+		<meta property="og:description" content="<?php echo $title ?>" />
+		<meta property="og:url" content="https://www.ericjs.net/projects/?name=<?php echo $projectName ?>" />
+		<meta property="og:image" content="https://www.ericjs.net/projects/<?php echo $projectName ?>/thumbnail.png" />
+		<meta property="og:image:type" content="image/png" />
+		<?php
+			$thumbnailFileName = $projectDirectory . "thumbnail.png";
+			$thumbnailSize = getimagesize($thumbnailFileName);
+			$thumbnailWidth = 100;
+			$thumbnailHeight = 100;
+			if($thumbnailSize) {
+				$thumbnailWidth = $thumbnailSize[0];
+				$thumbnailHeight = $thumbnailSize[1];
+			}
+		?>
+		<meta property="og:image:width" content="<?php echo $thumbnailWidth ?>" />
+		<meta property="og:image:height" content="<?php echo $thumbnailHeight ?>" />
+		<meta property="og:image:alt" content="Map preview" />
     </head>
     <body>
         <!-- index -->
@@ -113,7 +131,10 @@
                     ?>
                 </section>
 
-                <?php include '../nav.php' ?>
+                <?php
+					include '../nav.php';
+					include '../footer.php';
+				?>
             </main>
         </div>
     </body>

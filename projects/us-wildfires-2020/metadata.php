@@ -2,7 +2,7 @@
     $title = "Where were the largest wildfires of 2020 in the United States?";
     $dateAdded = strtotime("12 July 2021");
     $dateUpdated = strtotime("12 July 2021");
-    $tools = ["ArcGIS Pro"];
+    $tools = ["ArcGIS Pro", "ArcGIS Web Maps"];
     $staticMap = "BurnArea2020.png";
-    $interactiveMap = "";
+    $interactiveMap = "/webmaps/us-wildfires-2020/";
 ?>

@@ -8,20 +8,27 @@
         <p>
         The field of Geographic Information Systems allows me to use my web development knowledge to display environmental data in a meaningful way. I’m able to utilize my programming ability to solve and automate complex problems with spatial data. Creating eye-pleasing and user-friendly maps comes natural to me as my design experience directly correlates with the principles of cartography. My skills are a perfect blend for GIS.
         </p>
-        <h2>Expertise</h2>
+        <h2>Proficiencies</h2>
         <div class="list-columns">
             <ul>
-                <li>Software</li>
+                <li>Mapping Software</li>
                 <li>ArcGIS Pro</li>
                 <li>ArcMap</li>
                 <li>QGIS</li>
             </ul>
             <ul>
                 <li>Programming</li>
-                <li>Python</li>
                 <li>Javascript</li>
-                <li>HTML/CSS/PHP</li>
+                <li>HTML/CSS/PHP <span>(I built this website)</span></li>
+				<li>Python</li>
                 <li>SQL</li>
+            </ul>
+			<ul>
+                <li>Other Tools</li>
+                <li>ArcGIS Web Maps</li>
+				<li>ArcGIS API for Javascript</li>
+                <li>Inkscape <span>(alternative to Adobe Illustrator)</span></li>
+				<li>GIMP <span>(alternative to Adobe Photoshop)</span></li>
             </ul>
         </div>
     </section>
@@ -109,7 +116,7 @@
                         <li>Designed and developed UI for internal banking applications</li>
                         <li>Lead designer for multiple projects in their transition to a web-based interface</li>
                         <li>Collaborated with design team to align with company standards for branding</li>
-                        <li>Cooperated with users to fine-tune interaction experiences</li>
+                        <li>Cooperated with users to fine-tune user interaction experiences</li>
                     </ul>
                 </div>
                 <div>

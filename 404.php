@@ -28,6 +28,7 @@
             </main>
             <?php 
                 include 'nav.php';
+				include 'footer.php';
             ?>
         </div>
     </body>
