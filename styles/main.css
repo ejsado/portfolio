@@ -373,11 +373,19 @@ nav {
     top: 0.1rem;
     width: 2.6rem;
     height: 0.8rem;
-    outline: 0.09rem solid #FFF;
-    outline-offset: -0.5rem;
     background-image: radial-gradient(#FFF, #FFF 45%, transparent 50%);
     background-size: 0.8rem;
     background-repeat: no-repeat;
+}
+#milestones div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -2.5rem;
+    top: 0.4rem;
+    width: 2rem;
+    height: 0.2rem;
+    background-color: #FFF;
 }
 #milestones div p {
     margin: 0 0 0.2rem 0;
