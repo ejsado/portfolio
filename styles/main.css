@@ -3,7 +3,7 @@ html {
     font-size: 32px;
 }
 body {
-    background: #D8DACC;
+    background: #EEE;
     font-family: 'Heebo', Arial, Helvetica, sans-serif;
     color: rgba(0,0,0,0.8);
     font-weight: 400;
@@ -153,14 +153,14 @@ header p {
     margin: 2.5rem 1rem 1rem;
 }
 #action-container {
-    margin: 0 0.5rem;
+    margin: 0 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .button-container {
     flex-grow: 1;
-    margin: 0.5rem;
+    margin: 0.5rem 1rem;
     min-width: 20rem;
     max-width: 30rem;
 }
@@ -211,10 +211,10 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
 }
 .project-thumbnail {
-    margin: 0 0.5rem 1rem;
+    margin: 0 1rem 2rem;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 28rem;
@@ -222,6 +222,7 @@ nav {
     height: 20rem;
     border-radius: 0.4rem;
     background-size: cover;
+    box-shadow: 0 0 0 1px #CCC;
 }
 .project-link {
     display: flex;
@@ -277,7 +278,7 @@ nav {
 #about section {
     flex-grow: 1;
     flex-basis: 25rem;
-    margin: 0 1rem 2rem;
+    margin: 0 2rem 2rem;
 }
 #description p:first-of-type {
     margin-top: 0;
@@ -341,7 +342,7 @@ nav {
     bottom: 0;
     left: -0.2rem;
     right: -0.2rem;
-    background: linear-gradient(#D8DACC, transparent 5%, transparent 95%, #D8DACC);
+    background: linear-gradient(#EEE, transparent 5%, transparent 95%, #EEE);
 }
 #road::after {
     content: "";
@@ -415,7 +416,7 @@ nav {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.7);
     padding: 0.5rem;
     border-radius: 0.4rem;
 }
@@ -462,7 +463,12 @@ nav {
     display: block;
     max-width: 40rem;
     padding: 1rem 0.5rem;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.7);
+}
+#project-report blockquote {
+    border-left: 1px solid #999;
+    padding-left: 1rem;
+    font-style: italic;
 }
 @media
     (min-aspect-ratio: 1/1),
@@ -513,7 +519,7 @@ nav {
 }
 /* adventures */
 #adventures section:first-child {
-    margin: 0 1rem;
+    margin: 0 2rem;
 }
 #adventures h3 {
     text-align: center;
@@ -541,7 +547,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 0.5rem;
+    margin: 0 1.5rem;
 }
 #instagram-highlights .photo-container {
     margin: 0 0.5rem 1rem;
@@ -563,6 +569,6 @@ nav {
     }
     #contact-iframe {
         transform: none;
-        width: 100%;
-    }
+		width: 100%;
+	}
 }

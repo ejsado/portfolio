@@ -78,15 +78,18 @@
 				const expandLegend = new Expand({
 					view: view,
 					content: legend,
-					expandTooltip: "Legend"
+					expandTooltip: "Legend",
+					expandIconClass: "esri-icon-legend",
+					expanded: true,
+					mode: "floating"
 				});
 
+				view.ui.add("logo", "bottom-left");
 				view.ui.move("zoom", "bottom-right");
 				view.ui.add(scalebar, "bottom-right");
-				view.ui.add(expandLegend, "top-right");
 				view.ui.add("map-title", "top-left");
 				view.ui.add("project-link", "top-left");
-				view.ui.add("logo", "bottom-left");
+				view.ui.add(expandLegend, "top-left");
 
             });
         </script>

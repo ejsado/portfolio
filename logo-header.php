@@ -10,7 +10,7 @@
             />
     </a>
     <p class="text-weight-bold text-align-center text-size-normal">
-        GIS Analyist &middot; Web Developer
+        GIS Analyst &middot; Web Developer
     </p>
     <p class="text-align-center text-size-small">
         <span class="material-icons text-size-large vertical-align-sub">place</span>
