@@ -7,7 +7,8 @@
     $formattedName = str_replace($searchArray, $replaceArray, $projectName);
     $formattedName = ucwords($formattedName);
 
-    include $projectName . '/metadata.php';
+    include 'metadata.php';
+	$projectMetadata = $metadata[$projectName];
     // title
     // dateAdded
     // dateUpdated
@@ -22,7 +23,7 @@
         <title><?php echo $formattedName ?> &rtrif; Eric J.S.</title>
         <?php include '../head-links.php' ?>
 		<meta property="og:title" content="<?php echo $formattedName ?> Map" />
-		<meta property="og:description" content="<?php echo $title ?>" />
+		<meta property="og:description" content="<?php echo $projectMetadata['title'] ?>" />
 		<meta property="og:url" content="https://www.ericjs.net/projects/?name=<?php echo $projectName ?>" />
 		<meta property="og:image" content="https://www.ericjs.net/projects/<?php echo $projectName ?>/thumbnail.png" />
 		<meta property="og:image:type" content="image/png" />
@@ -56,7 +57,7 @@
             </header>
             <main id="project-info">
                 <h1>
-                    <?php echo $title ?>
+                    <?php echo $projectMetadata['title'] ?>
                 </h1>
                 <section id="project-metadata">
                     <div id="project-details">
@@ -67,20 +68,20 @@
                         <div>
                             <p>Posted</p>
                             <p>
-                                <?php echo date("F j, Y", $dateAdded) ?>
+                                <?php echo date("F j, Y", $projectMetadata['dateAdded']) ?>
                             </p>
                         </div>
                         <div>
                             <p>Last updated</p>
                             <p>
-                                <?php echo date("F j, Y", $dateUpdated) ?>
+                                <?php echo date("F j, Y", $projectMetadata['dateUpdated']) ?>
                             </p>
                         </div>
                         <div>
                             <p>Tools Used</p>
                             <p>
                             <?php
-                                foreach($tools as $tool) {
+                                foreach($projectMetadata['tools'] as $tool) {
                                     echo '<span>' . $tool . '</span>';
                                 }
                             ?>
@@ -89,10 +90,10 @@
                     </div>
                     <div id="project-map">
                         <?php
-                            if ($interactiveMap != "") {
-                                $imageLink = $interactiveMap;
+                            if ($projectMetadata['interactiveMap'] != "") {
+                                $imageLink = $projectMetadata['interactiveMap'];
                             } else {
-                                $imageLink = $projectDirectory . $staticMap;
+                                $imageLink = $projectDirectory . $projectMetadata['staticMap'];
                             }
                         ?>
                         <a href="<?php echo $imageLink ?>" id="full-map-image-link">
@@ -101,20 +102,20 @@
                     </div>
                     <div id="project-buttons">
                         <?php
-                            if ($interactiveMap != "") {
-                                echo '<a href="' . $interactiveMap . '" class="action-button solid">
+                            if ($projectMetadata['interactiveMap'] != "") {
+                                echo '<a href="' . $projectMetadata['interactiveMap'] . '" class="action-button solid">
                                         <span class="material-icons text-size-large vertical-align-sub">map</span>
                                         View the interactive map
                                     </a>';
                             }
-                            if ($staticMap != "") {
-                                if (substr($staticMap, -3) == "pdf") {
-                                    echo '<a href="' . $projectDirectory . $staticMap . '" class="action-button outline">
+                            if ($projectMetadata['staticMap'] != "") {
+                                if (substr($projectMetadata['staticMap'], -3) == "pdf") {
+                                    echo '<a href="' . $projectDirectory . $projectMetadata['staticMap'] . '" class="action-button outline">
                                             <span class="material-icons text-size-large vertical-align-sub">description</span>
                                             View the PDF map
                                         </a>';
                                 } else {
-                                    echo '<a href="' . $projectDirectory . $staticMap . '" class="action-button outline">
+                                    echo '<a href="' . $projectDirectory . $projectMetadata['staticMap'] . '" class="action-button outline">
                                             <span class="material-icons text-size-large vertical-align-sub">image</span>
                                             View the high resolution map
                                         </a>';

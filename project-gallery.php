@@ -3,9 +3,8 @@
     <?php
         //echo 'PHP' . phpversion();
 
-        // get an array of files and directories as strings
-        $directoryContents = scandir('projects');
-        //print_r($directoryContents);
+		// include metadata
+		include 'projects/metadata.php';
 
         // define project thumbnail element metadata
         class ProjectThumbnail {
@@ -32,24 +31,16 @@
         // create an array for sorting projects
         $projects = array();
 
-        // iterate through directory contents array
-        foreach($directoryContents as $projectRef) {
-            // if the file name does not contain a dot, consider it a directory and continue
-            if(gettype(strpos($projectRef, '.')) == 'boolean') {
-                // set default values
-                $title = 'Placeholder map title';
-                $dateAdded = time();
-                $dateUpdated = time();
-                // inject metadata file, which should overwrite above variables
-                include 'projects/' . $projectRef . '/metadata.php';
-                // create new projectThumnail with this metadata and push it to the projects array
-                array_push($projects, new ProjectThumbnail($projectRef, $title, $dateAdded, $dateUpdated, $tools));
-                // get the current index and add it to the dates to make sure they are unique
-                $projectsLength = count($projects) - 1;
-                $projects[$projectsLength]->addToDate($projectsLength);
-            }
+        // iterate through metadata array
+        foreach($metadata as $key => $value) {
+			// create new projectThumnail with this metadata and push it to the projects array
+			array_push($projects, new ProjectThumbnail($key, $value['title'], $value['dateAdded'], $value['dateUpdated'], $value['tools']));
+			// get the current index and add it to the dates to make sure they are unique
+			$projectsLength = count($projects) - 1;
+			$projects[$projectsLength]->addToDate($projectsLength);
         }
-
+		unset($value);
+		
         // sort array based on date added
         usort($projects, array("ProjectThumbnail", "compareDateAdded"));
 
