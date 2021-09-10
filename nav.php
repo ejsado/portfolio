@@ -15,4 +15,9 @@
         href="/adventures/">
         Adventures
     </a>
+	<a class="pill-button 
+        <?php if ($currentPage == "other") {echo "current-page";} ?>"
+        href="/other/">
+        Other Maps
+    </a>
 </nav>

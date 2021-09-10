@@ -28,7 +28,6 @@
                 <li>ArcGIS Online</li>
 				<li>ArcGIS API for Javascript</li>
                 <li>Inkscape <span>(alternative to Adobe Illustrator)</span></li>
-				<li>GIMP <span>(alternative to Adobe Photoshop)</span></li>
             </ul>
         </div>
     </section>
