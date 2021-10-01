@@ -47,6 +47,30 @@
 			'tools' => ["ArcGIS Pro", "Inkscape"],
 			'staticMap' => "ZionRelief3DMap.png",
 			'interactiveMap' => ""
+		],
+		'us-toll-booths' => [
+			'title' => "Where are all of the tolls in the US?",
+			'dateAdded' => strtotime("23 Sept 2021"),
+			'dateUpdated' => strtotime("23 Sept 2021"),
+			'tools' => ["ArcGIS Pro", "QGIS", "ArcGIS Online with JS API"],
+			'staticMap' => "TollBoothsUSA.png",
+			'interactiveMap' => "/webmaps/us-toll-booths/"
+		],
+		'canadian-rockies-relief' => [
+			'title' => "3D Relief: National Parks in the Canadian Rockies",
+			'dateAdded' => strtotime("29 Sept 2021"),
+			'dateUpdated' => strtotime("29 Sept 2021"),
+			'tools' => ["ArcGIS Pro", "Inkscape"],
+			'staticMap' => "CanadianRockiesFullImage.png",
+			'interactiveMap' => ""
+		],
+		'us-bike-paths' => [
+			'title' => "Where in the US has the most bike paths?",
+			'dateAdded' => strtotime("1 Oct 2021"),
+			'dateUpdated' => strtotime("1 Oct 2021"),
+			'tools' => ["QGIS"],
+			'staticMap' => "Bike_Path_Heat_Map.pdf",
+			'interactiveMap' => ""
 		]
 	];
 ?>

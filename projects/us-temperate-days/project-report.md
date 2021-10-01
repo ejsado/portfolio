@@ -80,7 +80,7 @@ https://www.ncei.noaa.gov/products/us-climate-normals
 
 ---
 
-## Notes About QGIS (from my limited experience)
+## Notes About QGIS
 
 I chose to use QGIS for this project to better understand its practicality. ArcGIS Pro is the industry standard (and for good reason), but I wanted to compare it with its open source alternative to form my own opinions. 
 

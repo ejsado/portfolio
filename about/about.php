@@ -6,7 +6,7 @@
         During my year-long road trip of 2019, I saw a lot of places. I explored mountains, deserts, rain forests, and grasslands, all while camping out of my truck. My love of the outdoors grew and I knew I had to somehow combine my experience with programming and design with my appreciation of nature.
         </p>
         <p>
-        The field of Geographic Information Systems allows me to use my web development knowledge to display environmental data in a meaningful way. I’m able to utilize my programming ability to solve and automate complex problems with spatial data. Creating eye-pleasing and user-friendly maps comes natural to me as my design experience directly correlates with the principles of cartography. My skills are a perfect blend for GIS.
+        The field of Geographic Information Systems allows me to use my web development knowledge to display environmental data in a meaningful way. I’m able to utilize my programming ability to solve and automate complex problems with spatial data. Creating eye-pleasing and user-friendly maps comes naturally to me as my design experience directly correlates with the principles of cartography. My skills are a perfect blend for GIS.
         </p>
         <h2>Proficiencies</h2>
         <div class="list-columns">

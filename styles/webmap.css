@@ -7,9 +7,6 @@ html, body {
 	width: 100vw;
 	height: 100%;
 }
-/*#map-title {
-	margin-right: 3rem;
-}*/
 #map-title h1 {
 	font-size: calc(0.8rem + 1vmin);
 	line-height: 1.4;
@@ -31,4 +28,24 @@ html, body {
 }
 .esri-legend__layer-caption {
 	display: none;
+}
+/* toll booth map */
+.toll-booths-map .esri-layer-list__item {
+	position: relative;
+}
+.toll-booths-map .esri-layer-list__item-container {
+	padding-left: 30px;
+}
+.toll-booths-map .esri-layer-list__item-actions-menu {
+	display: none;
+}
+.toll-booths-map .esri-layer-list__item .esri-layer-list-panel {
+	height: 0;
+	padding: 0;
+	margin: 0;
+}
+.toll-booths-map .esri-layer-list__item .esri-legend .esri-legend__service .esri-legend__symbol {
+	position: absolute;
+	top: 12px;
+	left: 12px;
 }

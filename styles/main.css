@@ -101,6 +101,7 @@ table tbody tr {
     height: 3rem;
     background-image: url('/media/banner-top-display.svg');
     background-size: contain;
+	background-repeat: repeat-x;
 }
 #body-container::after {
     content: "";
@@ -223,6 +224,7 @@ nav {
     border-radius: 0.4rem;
     background-size: cover;
     box-shadow: 0 0 0 1px #CCC;
+    background-color: #999;
 }
 .project-link {
     display: flex;
@@ -423,6 +425,7 @@ nav {
 #project-details div {
     flex-grow: 1;
     padding-right: 1rem;
+    margin: 0.25rem 0 0.25rem;
 }
 #project-details div p {
     margin: 0;
@@ -435,6 +438,9 @@ nav {
     font-weight: 400;
     font-size: 0.7rem;
     text-transform: uppercase;
+}
+#project-map {
+    box-shadow: 0 0 0 1px #CCC;
 }
 #full-map-image-link {
     display: block;
@@ -489,12 +495,8 @@ nav {
         grid-area: details;
         flex-direction: column;
     }
-    #project-details div {
-        margin-bottom: 0.5rem;
-    }
     #project-map {
         grid-area: map;
-        max-height: 32rem;
         overflow: hidden;
     }
     #full-map-image-link {
