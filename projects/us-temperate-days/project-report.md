@@ -1,6 +1,6 @@
 ## Summary
 
-I’ve found that I’m most comfortable outdoors when the temperature is **between 60 and 80 degrees fahrenheit**. Usually, that means I’m only comfortable in the Spring and Fall seasons in Delaware. Many people circumvent their temperature discomfort with a second home, but that isn’t an option for me. Being that I’m planning on moving soon, **which areas of the United States offer the most days of the year with mild daytime temperatures?**
+I’ve found that I’m most comfortable outdoors when the temperature is **between 60 and 80 degrees fahrenheit**. Usually, that means I’m only comfortable in the Spring and Fall seasons in Delaware. Many people circumvent their temperature discomfort with a second home, but that isn’t an option for me. Since I’m planning on moving soon, **which areas of the United States offer the most days of the year with mild daytime temperatures?**
 
 ---
 

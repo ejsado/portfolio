@@ -8,27 +8,14 @@
         <p>
         The field of Geographic Information Systems allows me to use my web development knowledge to display environmental data in a meaningful way. I’m able to utilize my programming ability to solve and automate complex problems with spatial data. Creating eye-pleasing and user-friendly maps comes naturally to me as my design experience directly correlates with the principles of cartography. My skills are a perfect blend for GIS.
         </p>
-        <h2>Proficiencies</h2>
-        <div class="list-columns">
-            <ul>
-                <li>Mapping Software</li>
-                <li>ArcGIS Pro</li>
-                <li>ArcMap</li>
-                <li>QGIS</li>
-            </ul>
-            <ul>
-                <li>Programming</li>
-                <li>Javascript</li>
-                <li>HTML/CSS/PHP <span>(I built this website)</span></li>
-				<li>Python</li>
-                <li>SQL</li>
-            </ul>
-			<ul>
-                <li>Other Tools</li>
-                <li>ArcGIS Online</li>
-				<li>ArcGIS API for Javascript</li>
-                <li>Inkscape <span>(alternative to Adobe Illustrator)</span></li>
-            </ul>
+        <h2>Skills and Proficiencies</h2>
+        <div>
+			<p>Certified <span class="text-weight-bold">ArcGIS Pro</span> user with a strong comprehension of GIS workflows and data processing</p>
+			<p>Experience with <span class="text-weight-bold">ArcMap</span> and <span class="text-weight-bold">QGIS</span> as standalone and complimentary tools</p>
+			<p>Professional web design and development experience with <span class="text-weight-bold">HTML, CSS, JavaScript, and PHP</span></p>
+			<p>Familiarity with building custom interactive maps using <span class="text-weight-bold">ArcGIS Online with JavaScript API</span></p>
+			<p>Coding with <span class="text-weight-bold">Python</span> and <span class="text-weight-bold">SQL</span> for workflow automation</p>
+			<p>Image editing with Inkscape SVG Editor as an alternative to Adobe Illustrator for adding text and symbology elements</p>
         </div>
     </section>
     <section id="experience">
@@ -41,34 +28,62 @@
                     2021
                     </p>
                     <p>
-                    Mapping Projects
+                    Portfolio of Map Projects (you are here)
                     </p>
                     <p>
                     Personal projects to answer questions about spatial relationships, explore geographic data, and practice cartographic skills.
                     </p>
+					<ul>
+                        <li>
+                        Applied my design skills to cartography to make user-friendly maps
+                        </li>
+                        <li>
+                        Accessed and filtered OpenStreetMap data to show specific points of interest
+                        </li>
+                        <li>
+                        Used ArcGIS Online with JavaScript API, HTML, and CSS to customize and display interactive maps
+                        </li>
+                        <li>
+                        Worked with elevation data to display 3D scenes
+                        </li>
+					</ul>
+					<p class="text-weight-bold">
+                    ESRI ArcGIS Desktop Entry Certification
+                    </p>
+					<ul>
+						<li>
+                        Demonstrated comprehension of ArcGIS concepts and experience with fundamental ArcGIS workflows
+                        </li>
+                        <li>
+                        Published web maps and modified web content on an active ESRI portal
+                        </li>
+                        <li>
+                        Performed mapping, visualization, editing, sharing, analysis and data management using ArcGIS Pro
+                        </li>
+					</ul>
                 </div>
                 <div>
                     <p>
                     2020 - 2021
                     </p>
                     <p>
-                    GIS Specialization with UC Davis via Coursera
+                    GIS Specialization Courses from UC Davis Extension
                     </p>
                     <p>
                     Four 4-week courses and one 8-week capstone project.
                     </p>
                     <ul>
                         <li>
-                        Fundamentals of GIS
+                        Processed vector and raster data and stored them in different formats
                         </li>
                         <li>
-                        GIS Data Formats, Design and Quality
+                        Acquired Landsat imagery and performed NDVI analysis
                         </li>
                         <li>
-                        Geospatial and Environmental Analysis
+                        Created TINs to form a 3D scene with LIDAR data
                         </li>
                         <li>
-                        Imagery, Automation, and Applications
+                        Utilized tools from ArcToolbox for data manipulation 
                         </li>
                         <li>
                         Geospatial Analysis Project
@@ -82,14 +97,14 @@
                         </ul>
                     </ul>
                     <p class="text-weight-bold">
-                    ESRI Online Learning
+                    Additional Online Learning from ESRI
                     </p>
                     <ul>
                         <li>
-                        Going Places with Spatial Analysis Massive Open Online Course (MOOC)
+                        Complex symbology, including choropleth, proportional symbol, value-by-alpha, and multivariate maps
                         </li>
                         <li>
-                        Cartography MOOC
+                        Projection vs. coordinate systems and their uses
                         </li>
                     </ul>
                 </div>
@@ -101,7 +116,7 @@
                     Road Trip Across North America
                     </p>
                     <p>
-                    I spent nearly a year camping in my truck across the US and Canada. I did plenty of hiking, biking, rock climbing, surfing, and sightseeing. A majority of the trip is <a href="https://www.instagram.com/maryunleashed/">chronicled on my Instagram</a>.
+                    I spent nearly a year camping in my truck across the US and Canada. I did plenty of hiking, biking, rock climbing, surfing, and off-grid exploration. A majority of the trip is <a href="https://www.instagram.com/maryunleashed/">chronicled on my Instagram</a>.
                     </p>
                 </div>
                 <div>
@@ -112,10 +127,11 @@
                     Web Developer/Designer at JP Morgan Chase
                     </p>
                     <ul>
-                        <li>Designed and developed UI for internal banking applications</li>
+                        <li>Designed and developed UI from mock-up to functional interface for internal banking applications</li>
                         <li>Lead designer for multiple projects in their transition to a web-based interface</li>
-                        <li>Collaborated with design team to align with company standards for branding</li>
-                        <li>Cooperated with users to fine-tune user interaction experiences</li>
+                        <li>Collaborated with the design team to align with company standards for branding</li>
+                        <li>Coded front-end interfaces for easy back-end integration</li>
+						<li>Worked with users to fine-tune interaction experiences</li>
                     </ul>
                 </div>
                 <div>

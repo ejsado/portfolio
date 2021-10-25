@@ -1,12 +1,12 @@
 ## Summary
 
-Trees provide shade, sound buffering, wind protection, wildlife habitat, and privacy. But, not all forests are created equal. Many forested areas in the United States are split by farmland or urban development. So, **where are the densest forests in the US?**
+Tree species vary greatly across the country and many forested areas in the United States are split by farmland or urban development. Some areas are sparse, while others are too dense to navigate. This makes some forests better suited than others for shade, sound buffering, wind protection, wildlife habitat, and privacy. So, **where are the densest forests in the US?**
 
 ---
 
 ## How is forest density measured?
 
-There are a few ways of determining this, but I used the basal area. [Basal area](https://en.wikipedia.org/wiki/Basal_area) is the cross-sectional area of trees at breast height (1.3m or 4.5 ft above ground).
+There are a few ways of determining forest density, but I used the basal area. [Basal area](https://en.wikipedia.org/wiki/Basal_area) is the cross-sectional area of trees at breast height (1.3m or 4.5 ft above ground).
 
 ![Example of basal area](us-forest-density/basal-area.png)
 

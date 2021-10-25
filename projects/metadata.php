@@ -3,9 +3,9 @@
 		'delaware-parks' => [
 			'title' => "Where are all of Delaware's parks?",
 			'dateAdded' => strtotime("27 June 2021"),
-			'dateUpdated' => strtotime("27 June 2021"),
+			'dateUpdated' => strtotime("9 October 2021"),
 			'tools' => ["ArcGIS Pro", "Inkscape"],
-			'staticMap' => "DelPublicLandsFull.png",
+			'staticMap' => "DelPublicLandsFullV2.png",
 			'interactiveMap' => ""
 		],
 		'florida-sea-levels' => [

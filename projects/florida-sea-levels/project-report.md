@@ -31,7 +31,7 @@ Sea levels are rising incredibly slowly, and many coastal structures are already
 
 Florida residents should not be worried about losing their homes to sea level rise. Although my data does show a significant number of people living in flooded areas in the future, that future is very distant. The purpose of this analysis was to illustrate the effect that sea level rise will have on coastlines over time. 
 
-Florida will lose land over time, especially in marshlands and beaches, but some of that land loss will be mitigated by marine construction (such as bulkheads) and land filling. I can say from experience that any new properties constructed in the future will be filled and graded appropriately as well as being built higher off the ground to avoid flooding. Florida has plenty of time to avoid rising tides with proper infrastructure (to a degree).
+Florida will lose land over time, especially in marshlands and beaches, but some of that land loss will be mitigated by marine construction (such as bulkheads) and land filling. I can say from my experience living in Delaware that any new properties constructed in the future will be filled and graded appropriately as well as being built higher off the ground to avoid flooding. Florida has plenty of time to avoid rising tides with proper infrastructure (to a degree).
 
 ---
 
