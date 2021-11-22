@@ -221,7 +221,7 @@ nav {
     flex-basis: 28rem;
     max-width: 40rem;
     height: 20rem;
-    border-radius: 0.4rem;
+    border-radius: 0.1rem;
     background-size: cover;
     box-shadow: 0 0 0 1px #CCC;
     background-color: #999;
@@ -231,7 +231,7 @@ nav {
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 0.4rem;
+    border-radius: 0.1rem;
     text-decoration: none;
 }
 .project-link .project-space {
@@ -261,7 +261,7 @@ nav {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-radius: 0 0 0.3rem 0.3rem;
+    border-radius: 0 0 0.1rem 0.1rem;
 }
 .project-link .project-title p {
     margin: 0 0.6rem;
