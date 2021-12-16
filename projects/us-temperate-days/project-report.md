@@ -8,9 +8,8 @@ I’ve found that I’m most comfortable outdoors when the temperature is **betw
 
 The National Centers for Environmental Information calculates climate normals every 10 years based on historical weather observations dating back to the 1950s.
 
-> Normals act both as a ruler to compare today’s weather and tomorrow’s forecast, and as a predictor of conditions in the near future. The official normals are calculated for a uniform 30 year period, and consist of annual/seasonal, monthly, daily, and hourly averages and statistics of temperature, precipitation, and other climatological variables from almost 15,000 U.S. weather stations.
->
-> https://www.ncei.noaa.gov/products/us-climate-normals
+> Normals act both as a ruler to compare today’s weather and tomorrow’s forecast, and as a predictor of conditions in the near future. The official normals are calculated for a uniform 30 year period, and consist of annual/seasonal, monthly, daily, and hourly averages and statistics of temperature, precipitation, and other climatological variables from almost 15,000 U.S. weather stations.  
+> [National Centers for Environmental Information](https://www.ncei.noaa.gov/products/us-climate-normals)
 
 The weather stations are fairly evenly spread, and should allow for good interpolation.
 
@@ -23,8 +22,7 @@ The first step was to mark days that had a maximum temperature between 60 and 80
 
 Second, I used the Statistics by Category tool to generate a new table with summary statistics of the new column I created. The output included the sum and mean of the new column which I joined with the weather stations table.
 
-The final processing step was to generate interpolation rasters. QGIS offers two choices: Triangulated Irregular Network (TIN) interpolation and Inverse Distance Weighted (IDW) interpolation. IDW interpolation makes more sense for this analysis, I won’t get into why, but here’s some documentation which explains the difference between the two:
-https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/spatial_analysis_interpolation.html
+The final processing step was to generate interpolation rasters. QGIS offers two choices: Triangulated Irregular Network (TIN) interpolation and Inverse Distance Weighted (IDW) interpolation. IDW interpolation makes more sense for this analysis, I won’t get into why, but you can read a [good explanation here](https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/spatial_analysis_interpolation.html).
 
 I generated three rasters; one for the contiguous 48 states, one for Alaska, and one for Hawaii.
 

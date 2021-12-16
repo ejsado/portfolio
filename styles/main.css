@@ -476,6 +476,20 @@ nav {
     padding-left: 1rem;
     font-style: italic;
 }
+#project-report pre {
+    background: rgba(0,0,0,0.05);
+    padding: 1rem;
+    border: 1px inset #FFF;
+}
+#project-report aside {
+    background: #FFF;
+    padding: 0.2rem 1rem 0.5rem;
+    border: 1px outset #FFF;
+}
+#project-report aside p:first-child {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
 @media
     (min-aspect-ratio: 1/1),
     (min-width: 50rem) and (max-resolution: 192dpi),
@@ -596,13 +610,18 @@ nav {
 }
 
 /* desktop media query */
-@media (max-resolution: 192dpi), (-webkit-max-device-pixel-ratio: 2), (min-aspect-ratio: 1/1)  {
+@media (max-resolution: 192dpi), (-webkit-max-device-pixel-ratio: 2), (min-aspect-ratio: 1/1) {
     html {
         font-size: 16px;
     }
     #contact-iframe {
         transform: none;
 		width: 100%;
+	}
+	@media (min-width: 100rem) {
+	    html {
+	        font-size: 18px;
+	    }
 	}
 }
 
