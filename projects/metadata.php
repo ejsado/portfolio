@@ -71,6 +71,14 @@
 			'tools' => ["QGIS"],
 			'staticMap' => "Bike_Path_Heat_Map.pdf",
 			'interactiveMap' => ""
+		],
+		'nevada-land-ownership' => [
+			'title' => "Who owns the land in Nevada?",
+			'dateAdded' => strtotime("12 Jan 2022"),
+			'dateUpdated' => strtotime("12 Jan 2022"),
+			'tools' => ["ArcGIS Pro"],
+			'staticMap' => "NevadaLandOwnership.pdf",
+			'interactiveMap' => ""
 		]
 	];
 ?>

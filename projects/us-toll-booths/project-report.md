@@ -33,7 +33,7 @@ To find all the toll booths, I simply filtered the nodes by the [â€œtoll_boothâ€
 
 Here are the queries I used to gather data:
 
-```
+```none
 /*
 get toll booths in DE
 */
@@ -45,7 +45,7 @@ out;
 node[barrier=toll_booth](area);
 out;
 ```
-```
+```none
 /*
 get toll gantries in PA
 */
@@ -78,7 +78,7 @@ Osmosis is a Java-based command line application for processing OSM data. You ca
 
 I used this command to filter that 7 gigabyte USA snapshot I downloaded earlier:
 
-```
+```none
 osmosis ^
 --read-pbf-fast "C:\path\to\pbf\us-latest.osm.pbf" ^
 --log-progress ^

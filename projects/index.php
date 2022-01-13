@@ -21,7 +21,11 @@
 <html>
     <head>
         <title><?php echo $formattedName ?> &rtrif; Eric J.S.</title>
+		
         <?php include '../head-links.php' ?>
+
+		<link href="/utility/prism-1.26.0/prism.css" rel="stylesheet" />
+
 		<meta property="og:title" content="<?php echo $formattedName ?> Map" />
 		<meta property="og:description" content="<?php echo $projectMetadata['title'] ?>" />
 		<meta property="og:url" content="https://www.ericjs.net/projects/?name=<?php echo $projectName ?>" />
@@ -41,7 +45,7 @@
 		<meta property="og:image:height" content="<?php echo $thumbnailHeight ?>" />
 		<meta property="og:image:alt" content="Map preview" />
     </head>
-    <body>
+    <body class="line-numbers"> <!-- enabled line numbers in prism syntax highlighting for the whole page -->
         <!-- index -->
         <div id="body-container">
             <header>
@@ -138,5 +142,6 @@
 				?>
             </main>
         </div>
+		<script src="/utility/prism-1.26.0/prism.js"></script>
     </body>
 </html>
