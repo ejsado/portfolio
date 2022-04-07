@@ -10,7 +10,7 @@ body {
 }
 /* font styles */
 a {
-    color: #0d7600;
+    color: #0069b4;
 }
 a:visited {
     color: #922b0f;
@@ -191,17 +191,17 @@ nav {
 }
 .pill-button {
     display: inline-block;
-    color: rgba(0,0,0,0.6);
+    color: rgba(18,62,154,0.75);
     font-weight: 700;
     padding: 0.3rem 0.8rem;
     border-radius: 1.3rem;
-    text-decoration: underline rgba(0,0,0,0.3);
+    text-decoration: underline rgba(18,62,154,0.5);
 }
 .pill-button:visited {
-    color: rgba(0,0,0,0.6);
+    color: rgba(18,62,154,0.75);
 }
 .pill-button.current-page {
-    background: rgba(0,0,0,0.5);
+    background: rgb(0 28 88 / 60%);
     color: #FFF;
     font-weight: 600;
     text-decoration: none;
