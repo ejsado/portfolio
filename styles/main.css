@@ -208,11 +208,50 @@ nav {
     box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
 }
 /* project thumbnails */
-#projects {
+#projects input[type=checkbox] {
+	display: none;
+}
+.project-thumbnail {
+	display: none;
+}
+/* https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/ */
+/* https://uspto.github.io/designpatterns/1.x/docs/components/collapsiblePanels.html */
+#collapse-toggle:checked ~ #projects-filters #collapse-container {
+	display: none;
+}
+#filter-analysis:checked ~ #projects-flex .project-thumbnail.analysis,
+#filter-cartography:checked ~ #projects-flex .project-thumbnail.cartography,
+#filter-arcgis-pro:checked ~ #projects-flex .project-thumbnail.arcgis-pro,
+#filter-qgis:checked ~ #projects-flex .project-thumbnail.qgis,
+#filter-arcmap:checked ~ #projects-flex .project-thumbnail.arcmap,
+#filter-python:checked ~ #projects-flex .project-thumbnail.python,
+#filter-arcgis-online:checked ~ #projects-flex .project-thumbnail.arcgis-online,
+#filter-image-editor:checked ~ #projects-flex .project-thumbnail.image-editor
+{
+	display: block;
+}
+/* these filter selectors must be in the same order as the checkboxes */
+#filter-analysis:not(:checked) +
+#filter-cartography:not(:checked) +
+#filter-arcgis-pro:not(:checked) +
+#filter-qgis:not(:checked) +
+#filter-arcmap:not(:checked) +
+#filter-python:not(:checked) +
+#filter-arcgis-online:not(:checked) +
+#filter-image-editor:not(:checked) ~ 
+#projects-flex .project-thumbnail
+{
+	display: block;
+}
+.filter-labels-container label {
+	margin-right: 1rem;
+	border: 1px solid black;
+}
+#projects-flex {
+	margin: 0 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 1rem;
 }
 .project-thumbnail {
     margin: 0 1rem 2rem;

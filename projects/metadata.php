@@ -4,7 +4,8 @@
 			'title' => "Where are all of Delaware's parks?",
 			'dateAdded' => strtotime("27 June 2021"),
 			'dateUpdated' => strtotime("9 October 2021"),
-			'tools' => ["ArcGIS Pro", "Inkscape"],
+			'tools' => ["ArcGIS Pro", "Image Editor"],
+			'tags' => ["arcgis-pro", "image-editor", "analysis"],
 			'staticMap' => "DelPublicLandsFullV2.png",
 			'interactiveMap' => ""
 		],
@@ -13,6 +14,7 @@
 			'dateAdded' => strtotime("20 May 2021"),
 			'dateUpdated' => strtotime("15 July 2021"),
 			'tools' => ["ArcMap", "ArcGIS Pro", "ArcGIS Online with JS API"],
+			'tags' => ["arcmap", "arcgis-pro", "arcgis-online", "analysis"],
 			'staticMap' => "florida-sea-levels.pdf",
 			'interactiveMap' => "/webmaps/florida-sea-levels/"
 		],
@@ -20,7 +22,8 @@
 			'title' => "Where are the densest forests in the United States?",
 			'dateAdded' => strtotime("29 June 2021"),
 			'dateUpdated' => strtotime("29 June 2021"),
-			'tools' => ["ArcGIS Pro", "Inkscape"],
+			'tools' => ["ArcGIS Pro", "Image Editor"],
+			'tags' => ["arcgis-pro", "image-editor", "analysis"],
 			'staticMap' => "USTreeDensityFull.png",
 			'interactiveMap' => ""
 		],
@@ -29,6 +32,7 @@
 			'dateAdded' => strtotime("2 Sept 2021"),
 			'dateUpdated' => strtotime("2 Sept 2021"),
 			'tools' => ["QGIS"],
+			'tags' => ["qgis", "analysis"],
 			'staticMap' => "US_days_between_60_80_PDF.pdf",
 			'interactiveMap' => ""
 		],
@@ -36,7 +40,8 @@
 			'title' => "Where were the largest wildfires of 2020 in the United States?",
 			'dateAdded' => strtotime("12 July 2021"),
 			'dateUpdated' => strtotime("26 July 2021"),
-			'tools' => ["ArcGIS Pro", "ArcGIS Online with JS API", "Inkscape"],
+			'tools' => ["ArcGIS Pro", "ArcGIS Online with JS API", "Image Editor"],
+			'tags' => ["arcgis-pro", "arcgis-online", "image-editor", "analysis"],
 			'staticMap' => "BurnArea2020.png",
 			'interactiveMap' => "/webmaps/us-wildfires-2020/"
 		],
@@ -44,7 +49,8 @@
 			'title' => "3D Relief: Zion National Park, Utah",
 			'dateAdded' => strtotime("9 Sept 2021"),
 			'dateUpdated' => strtotime("9 Sept 2021"),
-			'tools' => ["ArcGIS Pro", "Inkscape"],
+			'tools' => ["ArcGIS Pro", "Image Editor"],
+			'tags' => ["arcgis-pro", "image-editor", "cartography"],
 			'staticMap' => "ZionRelief3DMap.png",
 			'interactiveMap' => ""
 		],
@@ -53,6 +59,7 @@
 			'dateAdded' => strtotime("23 Sept 2021"),
 			'dateUpdated' => strtotime("16 Dec 2021"),
 			'tools' => ["ArcGIS Pro", "QGIS", "ArcGIS Online with JS API"],
+			'tags' => ["arcgis-pro", "qgis", "arcgis-online", "analysis"],
 			'staticMap' => "TollBoothsUSA.png",
 			'interactiveMap' => "/webmaps/us-toll-booths/"
 		],
@@ -60,7 +67,8 @@
 			'title' => "3D Relief: National Parks in the Canadian Rockies",
 			'dateAdded' => strtotime("29 Sept 2021"),
 			'dateUpdated' => strtotime("29 Sept 2021"),
-			'tools' => ["ArcGIS Pro", "Inkscape"],
+			'tools' => ["ArcGIS Pro", "Image Editor"],
+			'tags' => ["arcgis-pro", "image-editor", "cartography"],
 			'staticMap' => "CanadianRockiesFullImage.png",
 			'interactiveMap' => ""
 		],
@@ -69,6 +77,7 @@
 			'dateAdded' => strtotime("1 Oct 2021"),
 			'dateUpdated' => strtotime("16 Dec 2021"),
 			'tools' => ["QGIS"],
+			'tags' => ["qgis", "analysis"],
 			'staticMap' => "Bike_Path_Heat_Map.pdf",
 			'interactiveMap' => ""
 		],
@@ -76,7 +85,8 @@
 			'title' => "Who owns the land in Nevada?",
 			'dateAdded' => strtotime("12 Jan 2022"),
 			'dateUpdated' => strtotime("12 Jan 2022"),
-			'tools' => ["ArcGIS Pro"],
+			'tools' => ["ArcGIS Pro", "Python"],
+			'tags' => ["arcgis-pro", "python", "analysis"],
 			'staticMap' => "NevadaLandOwnership.pdf",
 			'interactiveMap' => ""
 		]
