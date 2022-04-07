@@ -1,6 +1,4 @@
 <?php
-    include '../utility/parsedown-1.7.4/Parsedown.php';
-
     $projectName = $_GET["name"];
     $searchArray = array("-", "us");
     $replaceArray = array(" ", "U.S.");
@@ -8,6 +6,11 @@
     $formattedName = ucwords($formattedName);
 
     include 'metadata.php';
+	if(!array_key_exists($projectName, $metadata)) {
+		http_response_code(404);
+		include '../404.php';
+		die();
+	}
 	$projectMetadata = $metadata[$projectName];
     // title
     // dateAdded
@@ -16,6 +19,8 @@
     // staticMap
     // interactiveMap
     $projectDirectory = $projectName . "/";
+
+	include '../utility/parsedown-1.7.4/Parsedown.php';
 ?>
 <!DOCTYPE html>
 <html>

@@ -18,12 +18,12 @@
         <div id="body-container">
             <?php 
                 include 'logo-header.php';
-                include 'actions.php';
+                // include 'actions.php';
             ?>
             <main id="lost">
                 <h2>Whoops!</h2>
                 <p>
-                That page doesn't exist. Try one of these instead:
+                That page doesn't exist. Try one of these instead &downarrow;
                 </p>
             </main>
             <?php 
