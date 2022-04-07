@@ -1,11 +1,7 @@
 <?php
     $projectName = $_GET["name"];
-    $searchArray = array("-", "us");
-    $replaceArray = array(" ", "U.S.");
-    $formattedName = str_replace($searchArray, $replaceArray, $projectName);
-    $formattedName = ucwords($formattedName);
-
-    include 'metadata.php';
+	
+	include 'metadata.php';
 	if(!array_key_exists($projectName, $metadata)) {
 		http_response_code(404);
 		include '../404.php';
@@ -19,6 +15,11 @@
     // staticMap
     // interactiveMap
     $projectDirectory = $projectName . "/";
+
+    $searchArray = array("-", "us");
+    $replaceArray = array(" ", "U.S.");
+    $formattedName = str_replace($searchArray, $replaceArray, $projectName);
+    $formattedName = ucwords($formattedName);
 
 	include '../utility/parsedown-1.7.4/Parsedown.php';
 ?>
