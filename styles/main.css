@@ -214,10 +214,88 @@ nav {
 .project-thumbnail {
 	display: none;
 }
+#projects-filters {
+    margin: -1rem 2rem 0;
+}
+#filters-container {
+	max-width: 40rem;
+	margin: 0 auto 1rem;
+}
+#collapse-label-container {
+    display: flex;
+    justify-content: end;
+}
+#collapse-label {
+    border-radius: 0.2rem;
+    background-color: #777;
+    color: #FFF;
+    padding: 0 0.5rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    vertical-align: middle;
+}
+#collapse-label::after {
+    content: " \25bc";
+    font-size: 0.7rem;
+}
+#collapse-label::before {
+    content: "\22C6  ";
+    font-size: 1.2rem;
+}
+#collapse-container {
+    overflow: hidden;
+    max-height: 30rem;
+    transition: max-height 500ms ease-out;
+}
+#collapse-container > div:first-child {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #777;
+    border-radius: 0.2rem;
+}
+#collapse-container p {
+    color: #FFF;
+    text-align: center;
+    margin: 0 0 0.5rem;
+}
+#collapse-container .filter-labels-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#collapse-container .filter-labels-container label {
+    display: inline-block;
+    margin: 0 0 0.2rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+    background-color: #FFF;
+    color: #000;
+    font-size: 0.8rem;
+}
+#clear-filters-button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+    background-color: #FFF;
+    color: #000;
+    border: 0;
+    font-size: 0.8rem;
+}
 /* https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/ */
 /* https://uspto.github.io/designpatterns/1.x/docs/components/collapsiblePanels.html */
 #collapse-toggle:checked ~ #projects-filters #collapse-container {
-	display: none;
+	max-height: 0;
+}
+#filter-analysis:checked ~ #projects-filters label[for=filter-analysis],
+#filter-cartography:checked ~ #projects-filters label[for=filter-cartography],
+#filter-arcgis-pro:checked ~ #projects-filters label[for=filter-arcgis-pro],
+#filter-qgis:checked ~ #projects-filters label[for=filter-qgis],
+#filter-arcmap:checked ~ #projects-filters label[for=filter-arcmap],
+#filter-python:checked ~ #projects-filters label[for=filter-python],
+#filter-arcgis-online:checked ~ #projects-filters label[for=filter-arcgis-online],
+#filter-image-editor:checked ~ #projects-filters label[for=filter-image-editor]
+{
+	background-color: green;
 }
 #filter-analysis:checked ~ #projects-flex .project-thumbnail.analysis,
 #filter-cartography:checked ~ #projects-flex .project-thumbnail.cartography,
@@ -243,9 +321,18 @@ nav {
 {
 	display: block;
 }
-.filter-labels-container label {
-	margin-right: 1rem;
-	border: 1px solid black;
+/* these filter selectors must be in the same order as the checkboxes */
+#filter-analysis:not(:checked) +
+#filter-cartography:not(:checked) +
+#filter-arcgis-pro:not(:checked) +
+#filter-qgis:not(:checked) +
+#filter-arcmap:not(:checked) +
+#filter-python:not(:checked) +
+#filter-arcgis-online:not(:checked) +
+#filter-image-editor:not(:checked) ~ 
+#projects-filters #collapse-label::before
+{
+	display: none;
 }
 #projects-flex {
 	margin: 0 1rem;

@@ -10,30 +10,37 @@
 	<input type="checkbox" name="tool" id="filter-arcgis-online">
 	<input type="checkbox" name="tool" id="filter-image-editor">
 	<div id="projects-filters">
-		<div>
-			<label for="collapse-toggle">Filters</label>
-		</div>
-		<div id="collapse-container">
-			<div>
-				<div>
-					<p>Categories</p>
-				</div>
-				<div class="filter-labels-container">
-					<label for="filter-analysis">Analysis</label>
-					<label for="filter-cartography">Cartography</label>
-				</div>
+		<div id="filters-container">
+			<div id="collapse-label-container">
+				<label id="collapse-label" for="collapse-toggle">Filters</label>
 			</div>
-			<div>
+			<div id="collapse-container">
 				<div>
-					<p>Tools</p>
-				</div>
-				<div class="filter-labels-container">
-					<label for="filter-arcgis-pro">ArcGIS Pro</label>
-					<label for="filter-qgis">QGIS</label>
-					<label for="filter-arcmap">ArcMap</label>
-					<label for="filter-python">Python</label>
-					<label for="filter-arcgis-online">ArcGIS Online</label>
-					<label for="filter-image-editor">Image Editor</label>
+					<div>
+						<div>
+							<p>Categories</p>
+						</div>
+						<div class="filter-labels-container">
+							<label for="filter-analysis">Analysis</label>
+							<label for="filter-cartography">Cartography</label>
+						</div>
+					</div>
+					<div>
+						<div>
+							<p>Tools</p>
+						</div>
+						<div class="filter-labels-container">
+							<label for="filter-arcgis-pro">ArcGIS Pro</label>
+							<label for="filter-qgis">QGIS</label>
+							<label for="filter-arcmap">ArcMap</label>
+							<label for="filter-python">Python</label>
+							<label for="filter-arcgis-online">ArcGIS Online</label>
+							<label for="filter-image-editor">Image Editor</label>
+						</div>
+					</div>
+					<div>
+						<button id="clear-filters-button">Clear</button>
+					</div>
 				</div>
 			</div>
 		</div>
