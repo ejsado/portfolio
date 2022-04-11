@@ -1,5 +1,13 @@
 <!-- projects content -->
 <main id="projects">
+	<script>
+		function clearFilters() {
+			const filterCheckboxes = document.querySelectorAll('input[type=checkbox][id^="filter-"]');
+			filterCheckboxes.forEach((element) => {
+				element.checked = false;
+			});
+		}
+	</script>
 	<input type="checkbox" id="collapse-toggle" checked>
 	<input type="checkbox" name="category" id="filter-analysis" >
 	<input type="checkbox" name="category" id="filter-cartography">
@@ -39,7 +47,7 @@
 						</div>
 					</div>
 					<div>
-						<button id="clear-filters-button">Clear</button>
+						<button id="clear-filters-button" onclick="clearFilters()">Clear</button>
 					</div>
 				</div>
 			</div>

@@ -14,10 +14,10 @@
         <div id="body-container">
             <?php 
                 include 'logo-header.php';
-                include 'actions.php';
                 $currentPage = "projects";
                 include 'nav.php';
                 include 'project-gallery.php';
+				include 'actions.php';
 				include 'footer.php';
             ?>
         </div>

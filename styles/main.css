@@ -151,7 +151,7 @@ header p {
 }
 /* call to actions */
 #actions p {
-    margin: 2.5rem 1rem 1rem;
+    margin: 2rem 1rem 1rem;
 }
 #action-container {
     margin: 0 1rem;
@@ -218,8 +218,7 @@ nav {
     margin: -1rem 2rem 0;
 }
 #filters-container {
-	max-width: 40rem;
-	margin: 0 auto 1rem;
+	margin: 0 0 1rem;
 }
 #collapse-label-container {
     display: flex;
@@ -227,16 +226,20 @@ nav {
 }
 #collapse-label {
     border-radius: 0.2rem;
-    background-color: #777;
+    background-color: #666;
     color: #FFF;
+    border: 1px solid #333;
     padding: 0 0.5rem;
     height: 1.8rem;
     line-height: 1.8rem;
     vertical-align: middle;
 }
 #collapse-label::after {
-    content: " \25bc";
+    display: inline-block;
+    content: "\25BC";
     font-size: 0.7rem;
+    padding: 0 0 0 0.3rem;
+    transform: rotateX(180deg);
 }
 #collapse-label::before {
     content: "\22C6  ";
@@ -250,11 +253,13 @@ nav {
 #collapse-container > div:first-child {
     margin-top: 1rem;
     padding: 1rem;
-    background-color: #777;
+    background-color: #CCC;
     border-radius: 0.2rem;
+    border: 1px solid #BBB;
 }
 #collapse-container p {
-    color: #FFF;
+    color: #333;
+    font-weight: 600;
     text-align: center;
     margin: 0 0 0.5rem;
 }
@@ -265,7 +270,7 @@ nav {
 #collapse-container .filter-labels-container label {
     display: inline-block;
     margin: 0 0 0.2rem;
-    padding: 0.2rem 0.4rem;
+    padding: 0.3rem 0.5rem;
     border-radius: 0.2rem;
     background-color: #FFF;
     color: #000;
@@ -274,17 +279,20 @@ nav {
 #clear-filters-button {
     display: block;
     margin: 0 auto;
-    padding: 0.2rem 0.4rem;
+    padding: 0.3rem 0.5rem;
     border-radius: 0.2rem;
-    background-color: #FFF;
-    color: #000;
-    border: 0;
+    background-color: #9d6262;
+    color: #FFF;
+    border: 1px solid #8b2323;
     font-size: 0.8rem;
+    font-weight: 400;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
 }
-/* https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/ */
-/* https://uspto.github.io/designpatterns/1.x/docs/components/collapsiblePanels.html */
 #collapse-toggle:checked ~ #projects-filters #collapse-container {
 	max-height: 0;
+}
+#collapse-toggle:checked ~ #projects-filters #collapse-label::after {
+    transform: rotateX(0);
 }
 #filter-analysis:checked ~ #projects-filters label[for=filter-analysis],
 #filter-cartography:checked ~ #projects-filters label[for=filter-cartography],
@@ -295,7 +303,8 @@ nav {
 #filter-arcgis-online:checked ~ #projects-filters label[for=filter-arcgis-online],
 #filter-image-editor:checked ~ #projects-filters label[for=filter-image-editor]
 {
-	background-color: green;
+	background-color: #f1e0d4;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 #filter-analysis:checked ~ #projects-flex .project-thumbnail.analysis,
 #filter-cartography:checked ~ #projects-flex .project-thumbnail.cartography,
