@@ -17,7 +17,6 @@
                 $currentPage = "about";
                 include '../nav.php';
                 include 'about.php';
-				include '../actions.php';
 				include '../footer.php';
             ?>
         </div>

@@ -151,7 +151,7 @@ header p {
 }
 /* call to actions */
 #actions p {
-    margin: 2rem 1rem 1rem;
+    margin: 1rem 1rem 1rem;
 }
 #action-container {
     margin: 0 1rem;
@@ -183,6 +183,35 @@ header p {
     color: #536641;
     border: 2px solid #536641;
     font-weight: 700;
+}
+#social-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#social-actions a {
+    display: block;
+    margin: 1rem;
+    border-radius: 100%;
+}
+#github-button {
+    background: #FFF;
+}
+#instagram-button {
+    background: #e55384;
+}
+#instagram-button .social-icon {
+    transform: scale(0.7);
+}
+#linkedin-button {
+    background: #0a66c2;
+}
+#linkedin-button .social-icon {
+    transform: scale(0.6);
+}
+.social-icon {
+    width: 3rem;
+    height: 3rem;
 }
 /* navigation */
 nav {
@@ -417,126 +446,8 @@ nav {
     flex-basis: 25rem;
     margin: 0 2rem 2rem;
 }
-#description p:first-of-type {
-    margin-top: 0;
-}
-#description h2 {
-    margin-top: 2rem;
-}
-#description img {
-    float: left;
-    width: 11rem;
-    margin: 0 1rem 0.1rem 0;
-    border-radius: 0.3rem;
-    border: 1px solid rgba(255,255,255,0.5);
-}
-#description .list-columns {
-    display: flex;
-    flex-wrap: wrap;
-}
-#description .list-columns ul {
-    margin: 0 1rem 1rem 0;
-    padding: 0;
-}
-#description .list-columns ul li {
-    list-style-type: none;
-    margin: 0 0 0.2rem;
-    padding: 0;
-    font-weight: 500
-}
-#description .list-columns ul li:first-child {
-    font-weight: 400;
-    opacity: 0.7;
-    font-size: 0.9rem;
+#about section > ul > li {
     margin-bottom: 0.5rem;
-}
-#description .list-columns ul li span {
-    font-weight: 300;
-    font-size: 0.9rem;
-}
-#timeline {
-    display: flex;
-}
-#road {
-    position: relative;
-    width: 0;
-    padding: 0.6rem;
-    background-color: #999;
-    border-left: 0.2rem solid #c1b6b0;
-    border-right: 0.2rem solid #c1b6b0;
-    background-image: linear-gradient(#999 70%, gold 70%);
-    background-size: 0.1rem 1.5rem;
-    background-repeat: repeat-y;
-    background-position: center;
-}
-#road::before {
-    content: "";
-    display: block;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    bottom: 0;
-    left: -0.2rem;
-    right: -0.2rem;
-    background: linear-gradient(#EEE, transparent 5%, transparent 95%, #EEE);
-}
-#road::after {
-    content: "";
-    display: block;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top: 3rem;
-    left: 0;
-    right: 0;
-    height: 2.5rem;
-    background-image: url("/media/truck-top-icon-display.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#milestones {
-    margin-left: 1.5rem;
-}
-#milestones div {
-    margin: 1.2rem 0;
-    position: relative;
-}
-#milestones div::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -2.7rem;
-    top: 0.1rem;
-    width: 2.6rem;
-    height: 0.8rem;
-    background-image: radial-gradient(#FFF, #FFF 45%, transparent 50%);
-    background-size: 0.8rem;
-    background-repeat: no-repeat;
-}
-#milestones div::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -2.5rem;
-    top: 0.4rem;
-    width: 2rem;
-    height: 0.2rem;
-    background-color: #FFF;
-}
-#milestones div p {
-    margin: 0 0 0.2rem 0;
-}
-#milestones div p:first-child {
-    font-size: 0.8rem;
-}
-#milestones div p:nth-child(2) {
-    font-weight: 700;
-}
-#milestones div ul {
-    margin-top: 0;
-    margin-bottom: 0;
 }
 /* 404 page */
 #lost {
@@ -662,12 +573,16 @@ nav {
     max-width: 24rem;
 }
 #contact-iframe-container {
-    height: 80rem;
+    min-height: 80rem;
 }
 #contact-iframe {
     width: 50%;
     transform: scale(2);
     transform-origin: 0 0;
+    background: transparent;
+}
+#contact-iframe body {
+    background: transparent;
 }
 /* adventures */
 #adventures section:first-child {
@@ -714,7 +629,7 @@ nav {
     opacity: 0;
 }
 /* other maps */
-#external-links {
+/* #external-links {
     margin: 0 auto;
     padding: 0 2rem;
     max-width: 80rem;
@@ -743,7 +658,7 @@ nav {
     border-bottom: 1px solid;
     display: inline-block;
     height: 1.7rem;
-}
+} */
 
 /* desktop media query */
 @media (max-resolution: 192dpi), (-webkit-max-device-pixel-ratio: 2), (min-aspect-ratio: 1/1) {

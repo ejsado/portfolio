@@ -15,6 +15,11 @@
         href="/about/">
         About
     </a>
+	<a class="pill-button 
+        <?php if ($currentPage == "contact") {echo "current-page";} ?>"
+        href="/contact/">
+        Contact
+    </a>
 	<!-- <a class="pill-button 
         <?php if ($currentPage == "other") {echo "current-page";} ?>"
         href="/other/">
