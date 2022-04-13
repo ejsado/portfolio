@@ -12,8 +12,8 @@
     // dateAdded
     // dateUpdated
     // tools
-    // highResProject
-    // interactiveProject
+    // staticProduct
+    // interactiveProduct
     $projectDirectory = $projectName . "/";
 
     $searchArray = array("-", "us");
@@ -106,11 +106,13 @@
                     </div>
                     <div id="project-preview">
                         <?php
-                            if ($projectMetadata['interactiveProject'] != "") {
-                                $imageLink = $projectMetadata['interactiveProject'];
+                            if ($projectMetadata['interactiveProduct'] != "") {
+                                $imageLink = $projectMetadata['interactiveProduct'];
+                            } elseif ($projectMetadata['staticProduct'] != "") {
+                                $imageLink = $projectDirectory . $projectMetadata['staticProduct'];
                             } else {
-                                $imageLink = $projectDirectory . $projectMetadata['highResProject'];
-                            }
+								$imageLink = $projectDirectory . $projectMetadata['codeProduct'];
+							}
                         ?>
                         <a href="<?php echo $imageLink ?>" id="full-project-link">
                             <img src="<?php echo $projectDirectory ?>full-image-low-res.png" alt="Full image">
@@ -118,24 +120,30 @@
                     </div>
                     <div id="project-buttons">
                         <?php
-                            if ($projectMetadata['interactiveProject'] != "") {
-                                echo '<a href="' . $projectMetadata['interactiveProject'] . '" class="action-button solid">
+                            if ($projectMetadata['interactiveProduct'] != "") {
+                                echo '<a href="' . $projectMetadata['interactiveProduct'] . '" class="action-button solid">
                                         <span class="material-icons text-size-large vertical-align-sub">map</span>
                                         View the interactive version
                                     </a>';
                             }
-                            if ($projectMetadata['highResProject'] != "") {
-                                if (substr($projectMetadata['highResProject'], -3) == "pdf") {
-                                    echo '<a href="' . $projectDirectory . $projectMetadata['highResProject'] . '" class="action-button outline">
+                            if ($projectMetadata['staticProduct'] != "") {
+                                if (substr($projectMetadata['staticProduct'], -3) == "pdf") {
+                                    echo '<a href="' . $projectDirectory . $projectMetadata['staticProduct'] . '" class="action-button outline">
                                             <span class="material-icons text-size-large vertical-align-sub">description</span>
                                             View the PDF
                                         </a>';
                                 } else {
-                                    echo '<a href="' . $projectDirectory . $projectMetadata['highResProject'] . '" class="action-button outline">
+                                    echo '<a href="' . $projectDirectory . $projectMetadata['staticProduct'] . '" class="action-button outline">
                                             <span class="material-icons text-size-large vertical-align-sub">image</span>
                                             View the high resolution image
                                         </a>';
                                 }
+                            }
+							if ($projectMetadata['codeProduct'] != "") {
+                                echo '<a href="' . $projectMetadata['codeProduct'] . '" class="action-button solid">
+                                        <span class="material-icons text-size-large vertical-align-sub">code</span>
+                                        View the code
+                                    </a>';
                             }
                         ?>
                     </div>
@@ -150,6 +158,7 @@
 
                 <?php
 					include '../nav.php';
+					include '../actions.php';
 					include '../footer.php';
 				?>
             </main>

@@ -390,6 +390,7 @@ nav {
     height: 20rem;
     border-radius: 0.1rem;
     background-size: cover;
+    background-position: top center;
     box-shadow: 0 0 0 1px #CCC;
     background-color: #999;
 }

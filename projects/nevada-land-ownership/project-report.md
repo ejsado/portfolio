@@ -53,7 +53,7 @@ Unfortunately, arcpy does not allow the automation of every ArcGIS Pro function.
 import arcpy
 
 # open project
-aprx = arcpy.mp.ArcGISProject(r"D:\ProjectsSyncDesktop\GIS\NevadaLands\NevadaLands.aprx")
+aprx = arcpy.mp.ArcGISProject(r"D:\path\to\arcgispro\project.aprx")
 # list the maps (5 total)
 mapList = aprx.listMaps()
 
@@ -79,7 +79,7 @@ for currentMap in mapList:
 	landLayer = getLandLayer(mapLayers)
 	# if the layer doesn't exist, add it
 	if landLayer == False:
-		landLayer = currentMap.addDataFromPath(r"D:\ProjectsSyncDesktop\GIS\NevadaLands\data\BLM_NV_SMA.shp\BLM_NV_SMA.shp")
+		landLayer = currentMap.addDataFromPath(r"D:\path\to\shapefile.shp")
 	print(landLayer.name)
 	# get the symbology of the land data layer
 	sym = landLayer.symbology
