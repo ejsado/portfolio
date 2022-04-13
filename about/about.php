@@ -79,6 +79,9 @@
 			Each project description is saved as a Markdown file and parsed by PHP before being served, which eliminates the need for a database or CMS and still allows easy editing. This probably wouldn't be a good idea for a more traffic-intense website, but for my purposes it works fine.
 		</p>
 		<p>
+			The website is responsive and therefore desktop and mobile friendly. It was designed to scale at any resolution.
+		</p>
+		<p>
 			The source code for this entire site can be <a href="https://github.com/ejsado/portfolio">found on GitHub</a>.
 		</p>
     </section>
