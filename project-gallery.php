@@ -9,9 +9,10 @@
 		}
 	</script>
 	<input type="checkbox" id="collapse-toggle" checked>
-	<input type="checkbox" name="category" id="filter-analysis" >
+	<input type="checkbox" name="category" id="filter-analysis">
 	<input type="checkbox" name="category" id="filter-cartography">
-	<input type="checkbox" name="tool" id="filter-arcgis-pro" >
+	<input type="checkbox" name="category" id="filter-automation">
+	<input type="checkbox" name="tool" id="filter-arcgis-pro">
 	<input type="checkbox" name="tool" id="filter-qgis">
 	<input type="checkbox" name="tool" id="filter-arcmap">
 	<input type="checkbox" name="tool" id="filter-python">
@@ -31,6 +32,7 @@
 						<div class="filter-labels-container">
 							<label for="filter-analysis">Analysis</label>
 							<label for="filter-cartography">Cartography</label>
+							<label for="filter-automation">Automation</label>
 						</div>
 					</div>
 					<div>
@@ -66,12 +68,13 @@
             public $title;
             public $dateAdded;
             public $dateUpdated;
-            public function __construct($name, $title, $dateAdded, $dateUpdated, $tools, $tags) {
+            public function __construct($name, $title, $dateAdded, $dateUpdated, $tools, $category, $tags) {
                 $this->name = $name;
                 $this->title = $title;
                 $this->dateAdded = $dateAdded;
                 $this->dateUpdated = $dateUpdated;
                 $this->tools = $tools;
+				$this->category = $category;
 				$this->tags = $tags;
             }
             public function addToDate($num) {
@@ -89,7 +92,7 @@
         // iterate through metadata array
         foreach($metadata as $key => $value) {
 			// create new projectThumnail with this metadata and push it to the projects array
-			array_push($projects, new ProjectThumbnail($key, $value['title'], $value['dateAdded'], $value['dateUpdated'], $value['tools'], $value['tags']));
+			array_push($projects, new ProjectThumbnail($key, $value['title'], $value['dateAdded'], $value['dateUpdated'], $value['tools'], $value['category'], $value['tags']));
 			// get the current index and add it to the dates to make sure they are unique
 			$projectsLength = count($projects) - 1;
 			$projects[$projectsLength]->addToDate($projectsLength);
@@ -111,14 +114,14 @@
                         data-date-updated="' . $thumbnail->dateUpdated . '">
                         <a class="project-link" href="/projects/?name=' . $thumbnail->name . '">
                             <div class="project-space"></div>
-                            <div class="project-tools">';
-			$reversedTools = array_reverse($thumbnail->tools);
-            foreach($reversedTools as $tool) {
-                echo '          <span>' . $tool . '</span>';
-            }
-            echo            '</div>
-                            <div class="project-title">
+                            <div class="project-information">
                                 <p class="text-size-large text-weight-medium">' . $thumbnail->title . '</p>
+								<p class="text-size-small text-weight-light">' . $thumbnail->category . ' &mdash; ' . date("F j, Y", $thumbnail->dateAdded) . '</p>
+								<div class="project-tools">';
+            foreach($thumbnail->tools as $tool) {
+                echo 				'<span>' . $tool . '</span>';
+            }
+            echo            	'</div>
                             </div>
                         </a>
                     </section>';

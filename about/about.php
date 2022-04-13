@@ -6,7 +6,7 @@
 		</h2>
 		<ul>
 			<li>
-				I have 7 years of experience as a Web Developer, but I'm looking to transition to the field of GIS.
+				I have 7 years of professional experience as a Web Developer, but I'm looking to transition to the field of GIS.
 			</li>
 			<li>
 				I hold an ArcGIS Desktop Entry Certification from ESRI and a completion certificate for the GIS Specialization from UC Davis.

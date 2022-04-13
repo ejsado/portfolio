@@ -255,9 +255,8 @@ nav {
 }
 #collapse-label {
     border-radius: 0.2rem;
-    background-color: #666;
+    background-color: #777;
     color: #FFF;
-    border: 1px solid #333;
     padding: 0 0.5rem;
     height: 1.8rem;
     line-height: 1.8rem;
@@ -325,6 +324,7 @@ nav {
 }
 #filter-analysis:checked ~ #projects-filters label[for=filter-analysis],
 #filter-cartography:checked ~ #projects-filters label[for=filter-cartography],
+#filter-automation:checked ~ #projects-filters label[for=filter-automation],
 #filter-arcgis-pro:checked ~ #projects-filters label[for=filter-arcgis-pro],
 #filter-qgis:checked ~ #projects-filters label[for=filter-qgis],
 #filter-arcmap:checked ~ #projects-filters label[for=filter-arcmap],
@@ -337,6 +337,7 @@ nav {
 }
 #filter-analysis:checked ~ #projects-flex .project-thumbnail.analysis,
 #filter-cartography:checked ~ #projects-flex .project-thumbnail.cartography,
+#filter-automation:checked ~ #projects-flex .project-thumbnail.automation,
 #filter-arcgis-pro:checked ~ #projects-flex .project-thumbnail.arcgis-pro,
 #filter-qgis:checked ~ #projects-flex .project-thumbnail.qgis,
 #filter-arcmap:checked ~ #projects-flex .project-thumbnail.arcmap,
@@ -349,6 +350,7 @@ nav {
 /* these filter selectors must be in the same order as the checkboxes */
 #filter-analysis:not(:checked) +
 #filter-cartography:not(:checked) +
+#filter-automation:not(:checked) +
 #filter-arcgis-pro:not(:checked) +
 #filter-qgis:not(:checked) +
 #filter-arcmap:not(:checked) +
@@ -362,6 +364,7 @@ nav {
 /* these filter selectors must be in the same order as the checkboxes */
 #filter-analysis:not(:checked) +
 #filter-cartography:not(:checked) +
+#filter-automation:not(:checked) +
 #filter-arcgis-pro:not(:checked) +
 #filter-qgis:not(:checked) +
 #filter-arcmap:not(:checked) +
@@ -382,8 +385,8 @@ nav {
     margin: 0 1rem 2rem;
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 28rem;
-    max-width: 40rem;
+    flex-basis: 20rem;
+    max-width: 30rem;
     height: 20rem;
     border-radius: 0.1rem;
     background-size: cover;
@@ -401,37 +404,34 @@ nav {
 .project-link .project-space {
     flex-grow: 1;
 }
-.project-link .project-tools {
-    padding: 0 0.2rem 0.2rem 0;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    flex-direction: row-reverse;
-}
-.project-link .project-tools span {
-    color: #FFF;
-    background: rgba(70,70,70,0.9);
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    border-radius: 0.2rem;
-    padding: 0 0.3rem;
-    margin: 0.1rem;
-}
-.project-link .project-title {
-    height: 4rem;
+.project-link .project-information {
     background-image: linear-gradient(
         rgba(255,255,255,0.8),
         rgba(255,255,255,1)
     );
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     border-radius: 0 0 0.1rem 0.1rem;
+    padding: 0.5rem;
 }
-.project-link .project-title p {
-    margin: 0 0.6rem;
+.project-link .project-information p {
+    margin: 0;
     line-height: 1.5rem;
     color: #000;
     text-shadow: #FFF 0 0 4px;
+}
+.project-link .project-tools {
+    padding: 0 0.2rem 0.2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.project-link .project-tools span {
+    color: #FFF;
+    background: #888;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    border-radius: 0.2rem;
+    padding: 0 0.3rem;
+    margin: 0 0.2rem 0 0;
 }
 /* about */
 #about {
@@ -444,7 +444,7 @@ nav {
 #about section {
     flex-grow: 1;
     flex-basis: 25rem;
-    margin: 0 2rem 2rem;
+    margin: 0 2rem 1rem;
 }
 #about section > ul > li {
     margin-bottom: 0.5rem;
@@ -469,9 +469,13 @@ nav {
     border-radius: 0.4rem;
 }
 #project-details div {
-    flex-grow: 1;
+    flex-grow: 0;
+    width: 12rem;
     padding-right: 1rem;
     margin: 0.25rem 0 0.25rem;
+}
+#project-details div:last-child {
+    flex-grow: 1;
 }
 #project-details div p {
     margin: 0;
@@ -485,14 +489,14 @@ nav {
     font-size: 0.7rem;
     text-transform: uppercase;
 }
-#project-map {
+#project-preview {
     box-shadow: 0 0 0 1px #CCC;
 }
-#full-map-image-link {
+#full-project-link {
     display: block;
     margin: 1rem 0;
 }
-#full-map-image-link img {
+#full-project-link img {
     width: 100%;
 }
 #project-buttons .action-button {
@@ -554,13 +558,12 @@ nav {
     }
     #project-details {
         grid-area: details;
-        flex-direction: column;
     }
-    #project-map {
+    #project-preview {
         grid-area: map;
         overflow: hidden;
     }
-    #full-map-image-link {
+    #full-project-link {
         margin: 0;
     }
     #project-buttons {
@@ -573,7 +576,8 @@ nav {
     max-width: 24rem;
 }
 #contact-iframe-container {
-    min-height: 80rem;
+    min-height: 100rem;
+    overflow: visible;
 }
 #contact-iframe {
     width: 50%;

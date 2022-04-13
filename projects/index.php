@@ -12,8 +12,8 @@
     // dateAdded
     // dateUpdated
     // tools
-    // staticMap
-    // interactiveMap
+    // highResProject
+    // interactiveProject
     $projectDirectory = $projectName . "/";
 
     $searchArray = array("-", "us");
@@ -32,7 +32,7 @@
 
 		<link href="/utility/prism-1.26.0/prism.css" rel="stylesheet" />
 
-		<meta property="og:title" content="<?php echo $formattedName ?> Map" />
+		<meta property="og:title" content="<?php echo $formattedName ?>" />
 		<meta property="og:description" content="<?php echo $projectMetadata['title'] ?>" />
 		<meta property="og:url" content="https://www.ericjs.net/projects/?name=<?php echo $projectName ?>" />
 		<meta property="og:image" content="https://www.ericjs.net/projects/<?php echo $projectName ?>/thumbnail.png" />
@@ -49,7 +49,7 @@
 		?>
 		<meta property="og:image:width" content="<?php echo $thumbnailWidth ?>" />
 		<meta property="og:image:height" content="<?php echo $thumbnailHeight ?>" />
-		<meta property="og:image:alt" content="Map preview" />
+		<meta property="og:image:alt" content="Project preview" />
     </head>
     <body class="line-numbers"> <!-- enabled line numbers in prism syntax highlighting for the whole page -->
         <!-- index -->
@@ -87,6 +87,12 @@
                                 <?php echo date("F j, Y", $projectMetadata['dateUpdated']) ?>
                             </p>
                         </div>
+						<div>
+                            <p>Category</p>
+                            <p>
+                            	<?php echo $projectMetadata['category'] ?>
+                            </p>
+                        </div>
                         <div>
                             <p>Tools Used</p>
                             <p>
@@ -98,36 +104,36 @@
                             </p>
                         </div>
                     </div>
-                    <div id="project-map">
+                    <div id="project-preview">
                         <?php
-                            if ($projectMetadata['interactiveMap'] != "") {
-                                $imageLink = $projectMetadata['interactiveMap'];
+                            if ($projectMetadata['interactiveProject'] != "") {
+                                $imageLink = $projectMetadata['interactiveProject'];
                             } else {
-                                $imageLink = $projectDirectory . $projectMetadata['staticMap'];
+                                $imageLink = $projectDirectory . $projectMetadata['highResProject'];
                             }
                         ?>
-                        <a href="<?php echo $imageLink ?>" id="full-map-image-link">
-                            <img src="<?php echo $projectDirectory ?>full-map-low-res.png" alt="Full map image">
+                        <a href="<?php echo $imageLink ?>" id="full-project-link">
+                            <img src="<?php echo $projectDirectory ?>full-image-low-res.png" alt="Full image">
                         </a>
                     </div>
                     <div id="project-buttons">
                         <?php
-                            if ($projectMetadata['interactiveMap'] != "") {
-                                echo '<a href="' . $projectMetadata['interactiveMap'] . '" class="action-button solid">
+                            if ($projectMetadata['interactiveProject'] != "") {
+                                echo '<a href="' . $projectMetadata['interactiveProject'] . '" class="action-button solid">
                                         <span class="material-icons text-size-large vertical-align-sub">map</span>
-                                        View the interactive map
+                                        View the interactive version
                                     </a>';
                             }
-                            if ($projectMetadata['staticMap'] != "") {
-                                if (substr($projectMetadata['staticMap'], -3) == "pdf") {
-                                    echo '<a href="' . $projectDirectory . $projectMetadata['staticMap'] . '" class="action-button outline">
+                            if ($projectMetadata['highResProject'] != "") {
+                                if (substr($projectMetadata['highResProject'], -3) == "pdf") {
+                                    echo '<a href="' . $projectDirectory . $projectMetadata['highResProject'] . '" class="action-button outline">
                                             <span class="material-icons text-size-large vertical-align-sub">description</span>
-                                            View the PDF map
+                                            View the PDF
                                         </a>';
                                 } else {
-                                    echo '<a href="' . $projectDirectory . $projectMetadata['staticMap'] . '" class="action-button outline">
+                                    echo '<a href="' . $projectDirectory . $projectMetadata['highResProject'] . '" class="action-button outline">
                                             <span class="material-icons text-size-large vertical-align-sub">image</span>
-                                            View the high resolution map
+                                            View the high resolution image
                                         </a>';
                                 }
                             }
