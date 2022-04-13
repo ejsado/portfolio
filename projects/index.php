@@ -155,13 +155,12 @@
                         echo $Parsedown->text($projectReport);
                     ?>
                 </section>
-
-                <?php
-					include '../nav.php';
-					include '../actions.php';
-					include '../footer.php';
-				?>
             </main>
+			<?php
+				include '../nav.php';
+				include '../actions.php';
+				include '../footer.php';
+			?>
         </div>
 		<script src="/utility/prism-1.26.0/prism.js"></script>
     </body>

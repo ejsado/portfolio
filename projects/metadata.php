@@ -69,12 +69,12 @@
 		'us-toll-booths' => [
 			'title' => "Where are all of the tolls in the US?",
 			'dateAdded' => strtotime("23 Sept 2021"),
-			'dateUpdated' => strtotime("16 Dec 2021"),
+			'dateUpdated' => strtotime("13 Apr 2022"),
 			'tools' => ["ArcGIS Pro", "QGIS", "ArcGIS Online with JS API"],
 			'category' => "Analysis",
 			'tags' => ["arcgis-pro", "qgis", "arcgis-online", "analysis"],
 			'interactiveProduct' => "/webmaps/us-toll-booths/",
-			'staticProduct' => "TollBoothsUSA.png",
+			'staticProduct' => "TollBoothsUSA.pdf",
 			'codeProduct' => ""
 		],
 		'canadian-rockies-relief' => [
