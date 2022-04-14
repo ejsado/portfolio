@@ -6,7 +6,7 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/light/main.css">
 		<link rel="stylesheet" href="/styles/webmap.css">
-        <script src="https://js.arcgis.com/4.21/"></script>
+        <script src="https://js.arcgis.com/4.23/"></script>
         <script>
             require([
 				"esri/config",
@@ -36,6 +36,9 @@
 				const view = new MapView({
 					map: webmap,
 					container: "map-container", // div element
+					constraints: {
+						rotationEnabled: false
+					}
 				});
 
 				const scalebar = new ScaleBar({
