@@ -530,8 +530,8 @@ nav {
 #project-report pre {
     background: rgba(0,0,0,0.05);
     border: 1px inset #FFF;
-    max-height: 50rem;
-    max-width: calc(100vw - 4rem);
+    max-height: 80vh;
+    max-width: calc(100vw - 5rem);
 }
 #project-report aside {
     background: #FFF;

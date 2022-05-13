@@ -149,7 +149,7 @@ ggplot(data=treePop, aes(y=count, x=year)) +
 	scale_x_continuous(expand=c(0,0.5))
 ```
 
-*Line plot of tree count per year*
+![Street Tree Population in NYC](nyc-trees/treePop.png)
 
 ### Alive Trees Over Time
 
@@ -222,7 +222,7 @@ ggplot(data=treePop, aes(x=year, y=count)) +
 	scale_fill_manual(values=c("#8db39f", "#d4cbc0"))
 ```
 
-*Line plot of living trees*
+![Living Street Tree Population in NYC](nyc-trees/livingTreePop.png)
 
 ### Top 10 Tree Genuses Over Time
 
@@ -351,7 +351,7 @@ ggplot(data=tgTop) +
 	scale_fill_viridis_d(direction=-1)
 ```
 
-*Multi bar plot of tree genuses*
+![NYC Street Tree Genus Population](nyc-trees/treeGenus.png)
 
 ### Mapping a Subset of Trees
 
@@ -412,7 +412,11 @@ ggmap(get_googlemap(center=treeCenter,
 	theme_void()
 ```
 
-*Map of Wallabout 1995 trees vs 2015 trees*
+![Street Trees in Wallabout, NY 11205 in 1995](nyc-trees/wallabout1995.png)
+<small>Street trees in Wallabout, NY 11205 in 1995.</small>
+
+![Street Trees in Wallabout, NY 11205 in 2015](nyc-trees/wallabout2015.png)
+<small>Street trees in Wallabout, NY 11205 in 2015.</small>
 
 ### Oldest Trees in the City
 
@@ -483,7 +487,7 @@ ggplot(data=treeDiameters, aes(x=tree_dbh, y=0)) +
 	densityTheme
 ```
 
-*violin plot of tree diameters*
+![NYC Street Tree Diameter Distribution](nyc-trees/treeDiameter.png)
 
 Any tree over 5 inches in diameter (the first quartile) should be considered old enough to include. Let’s map the oldest trees in NYC.
 
@@ -551,7 +555,8 @@ ggmap(get_stamenmap(bbox=oldTreeBB,
 	theme_void()
 ```
 
-*map of oldest trees*
+![Oldest Street Trees in NYC](nyc-trees/oldTreesNYC.png)
+<small>Oldest street trees in New York City in 2015.</small>
 
 ### Zip Code with the Most Old Trees
 
@@ -559,15 +564,19 @@ The map above is pretty dense, so let’s zoom to the zip code with the most old
 
 ```r
 # R
-# create a tibble (table) with unique zip codes and their counts
-zipCodes <- tibble(zipcode=unique(oldTrees$zipcode), count=tabulate(oldTrees$zipcode))
+# get the unique zip codes
+uniqueZips <- unique(oldTrees$zipcode)
+# convert zip codes to factors so they are considered as categories and not integers
+oldTrees$zipcode <- factor(oldTrees$zipcode, levels=uniqueZips)
+# create a tibble with unique zip codes and their counts
+zipCodes <- tibble(zipcode=uniqueZips, count=tabulate(oldTrees$zipcode))
 # sort by count
 zipCodes <- arrange(zipCodes, desc(count))
 # top 6
 head(zipCodes)
 # A tibble: 6 × 2
 #   zipcode count
-#   <fct>   <int>
+#   <int>   <int>
 # 1 10312    1862
 # 2 10314    1681
 # 3 10306    1358
@@ -614,7 +623,8 @@ ggmap(get_googlemap(center=oldestZipCenter,
 	theme_void()
 ```
 
-*map of Staten Island*
+![Oldest Street Trees in Staten Island, NY 10312](nyc-trees/oldTreesStatenIsland.png)
+<small>Oldest street trees in Staten Island, NY 10312 in 2015.</small>
 
 ### Themes
 
