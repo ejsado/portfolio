@@ -16,6 +16,8 @@
 	<input type="checkbox" name="tool" id="filter-qgis">
 	<input type="checkbox" name="tool" id="filter-arcmap">
 	<input type="checkbox" name="tool" id="filter-python">
+	<input type="checkbox" name="tool" id="filter-r">
+	<input type="checkbox" name="tool" id="filter-sql">
 	<input type="checkbox" name="tool" id="filter-arcgis-online">
 	<input type="checkbox" name="tool" id="filter-image-editor">
 	<div id="projects-filters">
@@ -44,6 +46,8 @@
 							<label for="filter-qgis">QGIS</label>
 							<label for="filter-arcmap">ArcMap</label>
 							<label for="filter-python">Python</label>
+							<label for="filter-r">R</label>
+							<label for="filter-sql">SQL</label>
 							<label for="filter-arcgis-online">ArcGIS Online</label>
 							<label for="filter-image-editor">Image Editor</label>
 						</div>

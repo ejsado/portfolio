@@ -329,6 +329,8 @@ nav {
 #filter-qgis:checked ~ #projects-filters label[for=filter-qgis],
 #filter-arcmap:checked ~ #projects-filters label[for=filter-arcmap],
 #filter-python:checked ~ #projects-filters label[for=filter-python],
+#filter-r:checked ~ #projects-filters label[for=filter-r],
+#filter-sql:checked ~ #projects-filters label[for=filter-sql],
 #filter-arcgis-online:checked ~ #projects-filters label[for=filter-arcgis-online],
 #filter-image-editor:checked ~ #projects-filters label[for=filter-image-editor]
 {
@@ -342,6 +344,8 @@ nav {
 #filter-qgis:checked ~ #projects-flex .project-thumbnail.qgis,
 #filter-arcmap:checked ~ #projects-flex .project-thumbnail.arcmap,
 #filter-python:checked ~ #projects-flex .project-thumbnail.python,
+#filter-r:checked ~ #projects-flex .project-thumbnail.r,
+#filter-sql:checked ~ #projects-flex .project-thumbnail.sql,
 #filter-arcgis-online:checked ~ #projects-flex .project-thumbnail.arcgis-online,
 #filter-image-editor:checked ~ #projects-flex .project-thumbnail.image-editor
 {
@@ -355,6 +359,8 @@ nav {
 #filter-qgis:not(:checked) +
 #filter-arcmap:not(:checked) +
 #filter-python:not(:checked) +
+#filter-r:not(:checked) +
+#filter-sql:not(:checked) +
 #filter-arcgis-online:not(:checked) +
 #filter-image-editor:not(:checked) ~ 
 #projects-flex .project-thumbnail
@@ -369,6 +375,8 @@ nav {
 #filter-qgis:not(:checked) +
 #filter-arcmap:not(:checked) +
 #filter-python:not(:checked) +
+#filter-r:not(:checked) +
+#filter-sql:not(:checked) +
 #filter-arcgis-online:not(:checked) +
 #filter-image-editor:not(:checked) ~ 
 #projects-filters #collapse-label::before

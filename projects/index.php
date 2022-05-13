@@ -163,5 +163,6 @@
 			?>
         </div>
 		<script src="/utility/prism-1.28.0/prism.js"></script>
+		<script src="/utility/collapse-pre/collapse-pre.js"></script>
     </body>
 </html>
