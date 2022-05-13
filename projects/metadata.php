@@ -120,6 +120,17 @@
 			'interactiveProduct' => "",
 			'staticProduct' => "",
 			'codeProduct' => "https://github.com/ejsado/landsat_mtl_bands"
+		],
+		'nyc-trees' => [
+			'title' => "How has New York City's tree population changed over time?",
+			'dateAdded' => strtotime("9 May 2022"),
+			'dateUpdated' => strtotime("9 May 2022"),
+			'tools' => ["R", "SQL", "Python"],
+			'category' => "Analysis",
+			'tags' => ["r", "sql", "python", "analysis"],
+			'interactiveProduct' => "",
+			'staticProduct' => "",
+			'codeProduct' => ""
 		]
 	];
 ?>

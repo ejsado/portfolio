@@ -16,8 +16,8 @@
     // interactiveProduct
     $projectDirectory = $projectName . "/";
 
-    $searchArray = array("-", "us");
-    $replaceArray = array(" ", "U.S.");
+    $searchArray = array("-", "us", "nyc");
+    $replaceArray = array(" ", "U.S.", "NYC");
     $formattedName = str_replace($searchArray, $replaceArray, $projectName);
     $formattedName = ucwords($formattedName);
 
@@ -30,7 +30,7 @@
 		
         <?php include '../head-links.php' ?>
 
-		<link href="/utility/prism-1.26.0/prism.css" rel="stylesheet" />
+		<link href="/utility/prism-1.28.0/prism.css" rel="stylesheet" />
 
 		<meta property="og:title" content="<?php echo $formattedName ?>" />
 		<meta property="og:description" content="<?php echo $projectMetadata['title'] ?>" />
@@ -162,6 +162,6 @@
 				include '../footer.php';
 			?>
         </div>
-		<script src="/utility/prism-1.26.0/prism.js"></script>
+		<script src="/utility/prism-1.28.0/prism.js"></script>
     </body>
 </html>
