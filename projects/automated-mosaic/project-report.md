@@ -184,5 +184,5 @@ Build footprints and seamlines for the mosaic. Footprints will determine which a
 ![Footprints and seamlines](automated-mosaic/lines.png)
 <small>Green lines are footprints. Blue are seamlines.</small>
 
-This entire script is hosted [on GitHub](https://github.com/ejsado/landsat_mtl_bands).
+This entire script is [hosted on GitHub](https://github.com/ejsado/landsat_mtl_bands).
 

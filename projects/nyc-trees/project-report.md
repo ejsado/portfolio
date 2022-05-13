@@ -393,7 +393,8 @@ lat <- treeSample$latitude
 treeBB <- make_bbox(lon, lat)
 # calculate the center of the bounding box
 # this will not work for every hemisphere due to the nature of latitude and longitude
-(treeCenter <- c((treeBB['left'] + treeBB['right'])/2, (treeBB['top'] + treeBB['bottom'])/2))
+(treeCenter <- c((treeBB['left'] + treeBB['right'])/2, 
+				 (treeBB['top'] + treeBB['bottom'])/2))
 
 # use google maps because it allows larger scales
 # request black and white roadmap with no labels
@@ -411,6 +412,8 @@ ggmap(get_googlemap(center=treeCenter,
 			   color="palegreen4") +
 	theme_void()
 ```
+
+<div class="compare-images"></div>
 
 ![Street Trees in Wallabout, NY 11205 in 1995](nyc-trees/wallabout1995.png)
 <small>Street trees in Wallabout, NY 11205 in 1995.</small>
@@ -597,7 +600,8 @@ lon <- oldestZip$longitude
 lat <- oldestZip$latitude
 oldestZipBB <- make_bbox(lon, lat)
 # find the center of the bounding box
-(oldestZipCenter <- c((oldestZipBB['left'] + oldestZipBB['right'])/2, (oldestZipBB['top'] + oldestZipBB['bottom'])/2))
+(oldestZipCenter <- c((oldestZipBB['left'] + oldestZipBB['right'])/2, 
+					  (oldestZipBB['top'] + oldestZipBB['bottom'])/2))
 
 # filter table by zip code, exclusive
 otherZips <- oldTrees[oldTrees$zipcode!=10312,]
@@ -685,3 +689,4 @@ densityTheme <- theme(text=element_text(family = "RobotoCond",
 					   panel.grid.major.x=element_line(color=gridColor))
 ```
 
+This entire script is [hosted on Github](https://github.com/ejsado/nyc_trees_r/blob/main/tree_analysis.R).

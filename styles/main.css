@@ -542,6 +542,10 @@ nav {
     font-weight: 500;
     font-size: 1.1rem;
 }
+#project-report div.compare-images + p, #project-report div.compare-images + p + p {
+    width: calc(50% - 0.5rem);
+    display: inline-block;
+}
 @media
     (min-aspect-ratio: 1/1),
     (min-width: 50rem) and (max-resolution: 192dpi),

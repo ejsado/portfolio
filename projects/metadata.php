@@ -130,7 +130,7 @@
 			'tags' => ["r", "sql", "python", "analysis"],
 			'interactiveProduct' => "",
 			'staticProduct' => "",
-			'codeProduct' => ""
+			'codeProduct' => "https://github.com/ejsado/nyc_trees_r"
 		]
 	];
 ?>

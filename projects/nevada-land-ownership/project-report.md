@@ -84,7 +84,8 @@ for currentMap in mapList:
 	# get the symbology of the land data layer
 	sym = landLayer.symbology
 	# set the type of symbology to display
-	# in this case, use unique values to show specific areas as specific colors
+	# in this case, use unique values to 
+	# show specific areas as specific colors
 	sym.updateRenderer('UniqueValueRenderer')
 	# iterate through the symbology groups, there is likely only 1
 	for grp in sym.renderer.groups:
@@ -99,8 +100,10 @@ for currentMap in mapList:
 	# apply rules for federal lands
 	if currentMap.name == "Nevada Federal Lands":
 		print("configure " + currentMap.name)
-		# add these values as unique values to the symbology group called NAME
-		# NAME is the field of the attribute table that contains these values to be symbolized
+		# add these values as unique values to the 
+		# symbology group called NAME
+		# NAME is the field of the attribute table that 
+		# contains these values to be symbolized
 		sym.renderer.addValues({"NAME" : [
 			"Bureau of Land Management",
 			"Bureau of Reclamation",
@@ -126,8 +129,10 @@ for currentMap in mapList:
 	# apply rules for state lands
 	if currentMap.name == "Nevada State Lands":
 		print("configure " + currentMap.name)
-		# add these values as unique values to the symbology group called NAME
-		# NAME is the field of the attribute table that contains these values to be symbolized
+		# add these values as unique values to the 
+		# symbology group called NAME
+		# NAME is the field of the attribute table that 
+		# contains these values to be symbolized
 		sym.renderer.addValues({"NAME" : [
 			"City of Las Vegas",
 			"Clark County, NV",
@@ -140,7 +145,8 @@ for currentMap in mapList:
 		for grp in sym.renderer.groups:
 			# make sure we are operating in the NAME group
 			if grp.heading == "NAME":
-				# for each item, apply a color and set the size of the outline to 0
+				# for each item, apply a color and set the 
+				# size of the outline to 0
 				for itm in grp.items:
 					itm.symbol.color = stateLandColor
 					itm.symbol.size = 0
@@ -193,17 +199,27 @@ for currentMap in mapList:
 		for grp in sym.renderer.groups:
 			if grp.heading == "NAME":
 				for itm in grp.items:
-					# it looks silly, but my version of python doesn't have a switch case...
+					# it looks silly, but this version of 
+					# python doesn't have a switch case...
 					if itm.label == "Bureau of Indian Affairs":
 						itm.symbol.color = indianLandColor
 						itm.symbol.size = 0
 					if itm.label == "Private":
 						itm.symbol.color = privateLandColor
 						itm.symbol.size = 0
-					if itm.label == "City of Las Vegas" or itm.label == "Clark County, NV" or itm.label == "Nevada State" or itm.label == "Regional Park":
+					if (   itm.label == "City of Las Vegas" 
+						or itm.label == "Clark County, NV" 
+						or itm.label == "Nevada State" 
+						or itm.label == "Regional Park"):
 						itm.symbol.color = stateLandColor
 						itm.symbol.size = 0
-					if itm.label == "Bureau of Land Management" or itm.label == "Bureau of Reclamation" or itm.label == "Department of Defense" or itm.label == "Department of Energy" or itm.label == "Forest Service" or itm.label == "Fish and Wildlife Service" or itm.label == "National Park Service":
+					if (   itm.label == "Bureau of Land Management" 
+						or itm.label == "Bureau of Reclamation" 
+						or itm.label == "Department of Defense" 
+						or itm.label == "Department of Energy" 
+						or itm.label == "Forest Service" 
+						or itm.label == "Fish and Wildlife Service" 
+						or itm.label == "National Park Service"):
 						itm.symbol.color = federalLandColor
 						itm.symbol.size = 0
 	# apply the symbology
