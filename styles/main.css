@@ -240,7 +240,7 @@ nav {
 #projects input[type=checkbox] {
 	display: none;
 }
-.project-thumbnail {
+.project-thumbnail.filter-hide {
 	display: none;
 }
 #projects-filters {
@@ -269,7 +269,7 @@ nav {
     padding: 0 0 0 0.3rem;
     transform: rotateX(180deg);
 }
-#collapse-label::before {
+#collapse-label.filters-active::before {
     content: "\22C6  ";
     font-size: 1.2rem;
 }
@@ -295,15 +295,6 @@ nav {
     text-align: center;
     margin-bottom: 1rem;
 }
-#collapse-container .filter-labels-container label {
-    display: inline-block;
-    margin: 0 0 0.2rem;
-    padding: 0.3rem 0.5rem;
-    border-radius: 0.2rem;
-    background-color: #FFF;
-    color: #000;
-    font-size: 0.8rem;
-}
 #clear-filters-button {
     display: block;
     margin: 0 auto;
@@ -316,72 +307,24 @@ nav {
     font-weight: 400;
     font-family: 'Heebo', Arial, Helvetica, sans-serif;
 }
-#collapse-toggle:checked ~ #projects-filters #collapse-container {
+#collapse-toggle:checked + #filters-container #collapse-container {
 	max-height: 0;
 }
-#collapse-toggle:checked ~ #projects-filters #collapse-label::after {
+#collapse-toggle:checked + #filters-container #collapse-label::after {
     transform: rotateX(0);
 }
-#filter-analysis:checked ~ #projects-filters label[for=filter-analysis],
-#filter-cartography:checked ~ #projects-filters label[for=filter-cartography],
-#filter-automation:checked ~ #projects-filters label[for=filter-automation],
-#filter-arcgis-pro:checked ~ #projects-filters label[for=filter-arcgis-pro],
-#filter-qgis:checked ~ #projects-filters label[for=filter-qgis],
-#filter-arcmap:checked ~ #projects-filters label[for=filter-arcmap],
-#filter-python:checked ~ #projects-filters label[for=filter-python],
-#filter-r:checked ~ #projects-filters label[for=filter-r],
-#filter-sql:checked ~ #projects-filters label[for=filter-sql],
-#filter-arcgis-online:checked ~ #projects-filters label[for=filter-arcgis-online],
-#filter-image-editor:checked ~ #projects-filters label[for=filter-image-editor]
-{
+#collapse-container .filter-labels-container label {
+    display: inline-block;
+    margin: 0 0 0.2rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    background-color: #FFF;
+    color: #000;
+    font-size: 0.8rem;
+}
+#collapse-container .filter-labels-container input[type=checkbox]:checked + label {
 	background-color: #f1e0d4;
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
-}
-#filter-analysis:checked ~ #projects-flex .project-thumbnail.analysis,
-#filter-cartography:checked ~ #projects-flex .project-thumbnail.cartography,
-#filter-automation:checked ~ #projects-flex .project-thumbnail.automation,
-#filter-arcgis-pro:checked ~ #projects-flex .project-thumbnail.arcgis-pro,
-#filter-qgis:checked ~ #projects-flex .project-thumbnail.qgis,
-#filter-arcmap:checked ~ #projects-flex .project-thumbnail.arcmap,
-#filter-python:checked ~ #projects-flex .project-thumbnail.python,
-#filter-r:checked ~ #projects-flex .project-thumbnail.r,
-#filter-sql:checked ~ #projects-flex .project-thumbnail.sql,
-#filter-arcgis-online:checked ~ #projects-flex .project-thumbnail.arcgis-online,
-#filter-image-editor:checked ~ #projects-flex .project-thumbnail.image-editor
-{
-	display: block;
-}
-/* these filter selectors must be in the same order as the checkboxes */
-#filter-analysis:not(:checked) +
-#filter-cartography:not(:checked) +
-#filter-automation:not(:checked) +
-#filter-arcgis-pro:not(:checked) +
-#filter-qgis:not(:checked) +
-#filter-arcmap:not(:checked) +
-#filter-python:not(:checked) +
-#filter-r:not(:checked) +
-#filter-sql:not(:checked) +
-#filter-arcgis-online:not(:checked) +
-#filter-image-editor:not(:checked) ~ 
-#projects-flex .project-thumbnail
-{
-	display: block;
-}
-/* these filter selectors must be in the same order as the checkboxes */
-#filter-analysis:not(:checked) +
-#filter-cartography:not(:checked) +
-#filter-automation:not(:checked) +
-#filter-arcgis-pro:not(:checked) +
-#filter-qgis:not(:checked) +
-#filter-arcmap:not(:checked) +
-#filter-python:not(:checked) +
-#filter-r:not(:checked) +
-#filter-sql:not(:checked) +
-#filter-arcgis-online:not(:checked) +
-#filter-image-editor:not(:checked) ~ 
-#projects-filters #collapse-label::before
-{
-	display: none;
 }
 #projects-flex {
 	margin: 0 1rem;

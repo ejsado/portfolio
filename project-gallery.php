@@ -1,26 +1,7 @@
 <!-- projects content -->
 <main id="projects">
-	<script>
-		function clearFilters() {
-			const filterCheckboxes = document.querySelectorAll('input[type=checkbox][id^="filter-"]');
-			filterCheckboxes.forEach((element) => {
-				element.checked = false;
-			});
-		}
-	</script>
-	<input type="checkbox" id="collapse-toggle" checked>
-	<input type="checkbox" name="category" id="filter-analysis">
-	<input type="checkbox" name="category" id="filter-cartography">
-	<input type="checkbox" name="category" id="filter-automation">
-	<input type="checkbox" name="tool" id="filter-arcgis-pro">
-	<input type="checkbox" name="tool" id="filter-qgis">
-	<input type="checkbox" name="tool" id="filter-arcmap">
-	<input type="checkbox" name="tool" id="filter-python">
-	<input type="checkbox" name="tool" id="filter-r">
-	<input type="checkbox" name="tool" id="filter-sql">
-	<input type="checkbox" name="tool" id="filter-arcgis-online">
-	<input type="checkbox" name="tool" id="filter-image-editor">
 	<div id="projects-filters">
+		<input type="checkbox" id="collapse-toggle" checked>
 		<div id="filters-container">
 			<div id="collapse-label-container">
 				<label id="collapse-label" for="collapse-toggle">Filters</label>
@@ -32,9 +13,14 @@
 							<p>Categories</p>
 						</div>
 						<div class="filter-labels-container">
-							<label for="filter-analysis">Analysis</label>
-							<label for="filter-cartography">Cartography</label>
-							<label for="filter-automation">Automation</label>
+							<input  id="filter-analysis" 	class="filter-checkbox" name="category" type="checkbox">
+							<label for="filter-analysis" 	>Analysis</label>
+
+							<input  id="filter-cartography" class="filter-checkbox" name="category" type="checkbox">
+							<label for="filter-cartography" >Cartography</label>
+
+							<input 	id="filter-automation" 	class="filter-checkbox" name="category" type="checkbox">
+							<label for="filter-automation" 	>Automation</label>
 						</div>
 					</div>
 					<div>
@@ -42,18 +28,33 @@
 							<p>Tools</p>
 						</div>
 						<div class="filter-labels-container">
-							<label for="filter-arcgis-pro">ArcGIS Pro</label>
-							<label for="filter-qgis">QGIS</label>
-							<label for="filter-arcmap">ArcMap</label>
-							<label for="filter-python">Python</label>
-							<label for="filter-r">R</label>
-							<label for="filter-sql">SQL</label>
-							<label for="filter-arcgis-online">ArcGIS Online</label>
-							<label for="filter-image-editor">Image Editor</label>
+							<input  id="filter-arcgis-pro" 		class="filter-checkbox" name="tool" type="checkbox">
+							<label for="filter-arcgis-pro"		>ArcGIS Pro</label>
+
+							<input  id="filter-qgis" 			class="filter-checkbox" name="tool" type="checkbox">
+							<label for="filter-qgis"			>QGIS</label>
+							
+							<input  id="filter-arcmap" 			class="filter-checkbox" name="tool" type="checkbox">
+							<label for="filter-arcmap"			>ArcMap</label>
+
+							<input  id="filter-python" 			class="filter-checkbox" name="tool" type="checkbox">
+							<label for="filter-python"			>Python</label>
+
+							<input  id="filter-r" 				class="filter-checkbox" name="tool" type="checkbox">
+							<label for="filter-r"				>R</label>
+
+							<input  id="filter-sql" 			class="filter-checkbox" name="tool" type="checkbox">
+							<label for="filter-sql"				>SQL</label>
+
+							<input  id="filter-arcgis-online" 	class="filter-checkbox" name="tool" type="checkbox">
+							<label for="filter-arcgis-online"	>ArcGIS Online</label>
+
+							<input  id="filter-image-editor" 	class="filter-checkbox" name="tool" type="checkbox">
+							<label for="filter-image-editor"	>Image Editor</label>
 						</div>
 					</div>
 					<div>
-						<button id="clear-filters-button" onclick="clearFilters()">Clear</button>
+						<button id="clear-filters-button" onclick="clearFilters()">Clear Filters</button>
 					</div>
 				</div>
 			</div>
@@ -132,4 +133,5 @@
         }
     ?>
 	</div>
+	<script src="/utility/filter-thumbnails/filter-thumbnails.js"></script>
 </main>
