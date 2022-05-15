@@ -1,6 +1,6 @@
 <!-- projects content -->
 <main id="projects">
-	<div id="projects-filters">
+	<div id="projects-filters" class="javascript-disabled">
 		<input type="checkbox" id="collapse-toggle" checked>
 		<div id="filters-container">
 			<div id="collapse-label-container">
@@ -133,5 +133,8 @@
         }
     ?>
 	</div>
+	<script>
+		document.getElementById('projects-filters').classList.remove('javascript-disabled');
+	</script>
 	<script src="/utility/filter-thumbnails/filter-thumbnails.js"></script>
 </main>

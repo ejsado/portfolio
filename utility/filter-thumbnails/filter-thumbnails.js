@@ -2,6 +2,7 @@
 
 // define functions
 
+// return true if any filters are enabled
 function filtersActive() {
 	for (let element of filterCheckboxes) {
 		if (element.checked == true) {
@@ -11,10 +12,12 @@ function filtersActive() {
 	return false;
 }
 
+// remove first 7 chars from string ('filter-')
 function getFilterNameFromId(elementIdString) {
 	return elementIdString.slice(7);
 }
 
+// return true if any class names are found in tokenList
 function containsOneOfManyClasses(classArray, tokenList) {
 	for (const className of classArray) {
 		if (tokenList.contains(className)) {
@@ -24,6 +27,9 @@ function containsOneOfManyClasses(classArray, tokenList) {
 	return false;
 }
 
+// iterate through filter checkboxes
+// get class names of filters
+// add 'filter-hide' class to thumbnails not containing filter classes
 function updateFilter() {
 	let filterShow = [];
 	for (let checkbox of filterCheckboxes) {
@@ -31,7 +37,6 @@ function updateFilter() {
 			filterShow.push(getFilterNameFromId(checkbox.id));
 		}
 	}
-	console.log(filterShow);
 	for (let thumbnail of projectThumbnails) {
 		if (containsOneOfManyClasses(filterShow, thumbnail.classList)) {
 			thumbnail.classList.remove("filter-hide");
@@ -41,17 +46,21 @@ function updateFilter() {
 	}
 }
 
+// remove all 'filter-hide' classes from thumbnails
 function displayAll() {
 	for (let thumbnail of projectThumbnails) {
 		thumbnail.classList.remove("filter-hide");
 	}
 }
 
+// reset all filters
+// set all checkboxes to false
 function clearFilters() {
 	for (let checkbox of filterCheckboxes) {
 		checkbox.checked = false;
 	}
 	displayAll();
+	// remove star from filters button
 	collapseButton.classList.remove("filters-active");
 }
 
@@ -68,12 +77,14 @@ const collapseButton = document.getElementById('collapse-label');
 // add event listeners for checkbox changes
 for (let checkbox of filterCheckboxes) {
 	checkbox.addEventListener('change', (event) => {
+		// if any filters are active, update the thumbnails
 		if (filtersActive()) {
-			console.log("at least one filter is set");
+			// add star from filters button
 			collapseButton.classList.add("filters-active");
 			updateFilter();
 		} else {
-			console.log("no filters are set");
+			// else display all thumbnails
+			// remove star from filters button
 			collapseButton.classList.remove("filters-active");
 			displayAll();
 		}

@@ -30,6 +30,9 @@
 						PyCharm
 					</li>
 					<li>
+						R Studio
+					</li>
+					<li>
 						VS Code
 					</li>
 					<li>
@@ -47,13 +50,16 @@
 						Python
 					</li>
 					<li>
+						R
+					</li>
+					<li>
+						SQL
+					</li>
+					<li>
 						PHP
 					</li>
 					<li>
 						JavaScript
-					</li>
-					<li>
-						SQL
 					</li>
 					<li>
 						HTML and CSS
@@ -70,7 +76,7 @@
 			About this Website
 		</h2>
 		<p>
-			I built this website from scratch without the use of a CMS (like Wordpress) or templates. It minimizes the use of JavaScript and maximizes the use of PHP.
+			I built this website from scratch without the use of a CMS (like Wordpress) or templates.
 		</p>
 		<p>
 			Each project description is saved as a Markdown file and parsed by PHP before being served, which eliminates the need for a database or CMS and still allows easy editing. This probably wouldn't be a good idea for a more traffic-intense website, but for my purposes it works fine.

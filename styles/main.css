@@ -8,6 +8,10 @@ body {
     color: rgba(0,0,0,0.8);
     font-weight: 400;
 }
+/* hide elements that rely on javascript */
+.javascript-disabled {
+	display: none;
+}
 /* font styles */
 a {
     color: #0069b4;
