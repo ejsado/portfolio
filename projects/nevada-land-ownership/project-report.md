@@ -230,5 +230,3 @@ aprx.save()
 
 ```
 
-To visualize the percentage of each category of land ownership, I wanted to create a pie chart. I wanted to create a simple circular chart to summarize my data with software designed for data processing. I could create a bar chart, a line chart, or a number of other obscure charts, but not a pie chart. I had to export my statistical data to an external spreadsheet because ArcGIS Pro does not have the ability to make pie charts.
-

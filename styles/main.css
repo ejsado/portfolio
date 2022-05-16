@@ -489,12 +489,12 @@ nav {
     max-width: calc(100vw - 5rem);
     margin-top: 0;
     font-size: 0.9rem;
-    transition: max-height 200ms ease-out;
+    transition: all 200ms ease-out;
 }
 #project-report .collapse-pre-label {
     display: block;
     max-width: calc(100vw - 5rem);
-    background: rgb(0 108 173 / 20%);
+    background: rgb(53 121 1 / 20%);
     margin-top: 1rem;
     padding: 0.5rem;
     text-transform: uppercase;
