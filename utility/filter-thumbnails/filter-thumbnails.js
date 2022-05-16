@@ -85,6 +85,9 @@ function displayAll() {
 	for (let thumbnail of projectThumbnails) {
 		thumbnail.classList.remove("filter-hide");
 	}
+	// remove star from filters button
+	collapseButton.classList.remove("filters-active");
+	noResults.classList.remove("filter-show");
 }
 
 // reset all filters
@@ -94,8 +97,6 @@ function clearFilters() {
 		checkbox.checked = false;
 	}
 	displayAll();
-	// remove star from filters button
-	collapseButton.classList.remove("filters-active");
 }
 
 // only allow one category to be selected
@@ -145,8 +146,6 @@ for (let checkbox of filterCheckboxes) {
 			}
 		} else {
 			// else display all thumbnails
-			// remove star from filters button
-			collapseButton.classList.remove("filters-active");
 			displayAll();
 		}
 	});

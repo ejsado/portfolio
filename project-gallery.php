@@ -132,11 +132,11 @@
                     </section>';
         }
     ?>
-		<section id="filter-no-results">
-			<p class="text-weight-bold text-size-large">
-				No results.
-			</p>
-		</section>
+	</div>
+	<div id="filter-no-results">
+		<p class="text-weight-bold text-size-large text-align-center">
+			No results.
+		</p>
 	</div>
 	<script>
 		// if javascript is allowed, show filters
