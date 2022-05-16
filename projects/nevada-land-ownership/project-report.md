@@ -45,9 +45,9 @@ Note that there are several areas in this dataset that are uncategorized. This m
 
 ## Process
 
-Although I only need to symbolize a singular dataset, I tried to do as much with arcpy as I could. Arcpy is ESRI’s python library for desktop geoprocessing. It allows you to automate workflows with code rather than a user interface.
+Although I only need to symbolize a singular dataset, I tried to do as much with `arcpy` as I could. `Arcpy` is ESRI’s python library for desktop geoprocessing. It allows you to automate workflows with code rather than a user interface.
 
-Unfortunately, arcpy does not allow the automation of every ArcGIS Pro function. For this project, I wanted to create four maps, but I could not do this with code. I had to create new empty maps manually (with the UI) and I used arcpy to add data and manipulate symbology within each map. This makes it especially easy to update all of the maps with new colors if needed. 
+Unfortunately, `arcpy` does not allow the automation of every ArcGIS Pro function. For this project, I wanted to create four maps, but I could not do this with code. I had to create new empty maps manually (with the UI) and I used `arcpy` to add data and manipulate symbology within each map. This makes it especially easy to update all of the maps with new colors if needed. 
 
 ```python
 import arcpy
