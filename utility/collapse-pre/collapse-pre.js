@@ -28,11 +28,16 @@ function getPreLanguage(preElement) {
 	for (let classValue of codeElement.classList.entries()) {
 		const className = classValue[1];
 		if (className.startsWith("language-")) {
-			// return the language name without the prefix
-			return className.slice(9);
+			// get the language name without the prefix
+			const codeLanguage = className.slice(9);
+			if (codeLanguage == "none") {
+				return "";
+			} else {
+				return codeLanguage;
+			}
 		}
 	}
-	return false;
+	return "";
 }
 
 // get the parent element of all the pre elements

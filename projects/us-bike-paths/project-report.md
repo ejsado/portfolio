@@ -23,7 +23,7 @@ I had to use Osmosis because other tools I tried were not practical for scanning
 
 Here is the command I used to filter the cycleways:
 
-```none
+```osmosis
 osmosis ^
 --read-pbf-fast "C:\path\to\pbf\us-0921.osm.pbf" ^
 --log-progress ^
