@@ -487,6 +487,34 @@ nav {
     border: 1px inset #FFF;
     max-height: 80vh;
     max-width: calc(100vw - 5rem);
+    margin-top: 0;
+    font-size: 0.9rem;
+    transition: max-height 200ms ease-out;
+}
+#project-report .collapse-pre-label {
+    display: block;
+    max-width: calc(100vw - 5rem);
+    background: rgb(0 108 173 / 20%);
+    margin-top: 1rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+#project-report .collapse-pre-label::before {
+    content: "\2013  Hide ";
+}
+#project-report .collapse-pre-checkbox {
+    display: none;
+}
+#project-report .collapse-pre-checkbox:checked + .collapse-pre-label + pre {
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#project-report .collapse-pre-checkbox:checked + .collapse-pre-label::before {
+    content: "+ Show ";
 }
 #project-report aside {
     background: #FFF;
