@@ -12,6 +12,16 @@ function filtersActive() {
 	return false;
 }
 
+// return true if all project thumbnails are hidden
+function allHidden() {
+	for (let element of projectThumbnails) {
+		if (!element.classList.contains("filter-hide")) {
+			return false;
+		}
+	}
+	return true;
+}
+
 // remove first 7 chars from string ('filter-')
 function getFilterNameFromId(elementIdString) {
 	return elementIdString.slice(7);
@@ -114,6 +124,9 @@ const filterAnd = document.getElementsByName("category");
 // filters operating with OR
 const filterOr = document.getElementsByName("tool");
 
+// no results message 
+const noResults = document.getElementById("filter-no-results");
+
 // add event listeners for checkbox changes
 for (let checkbox of filterCheckboxes) {
 	checkbox.addEventListener('change', (event) => {
@@ -124,7 +137,12 @@ for (let checkbox of filterCheckboxes) {
 			if (event.currentTarget.name == "category") {
 				deselectOthers(event.currentTarget, event.currentTarget.name);
 			}
-			updateFilter(classNameArray(filterAnd), classNameArray(filterOr));
+			updateFilter(classNameArray(filterCheckboxes), []);
+			if (allHidden()) {
+				noResults.classList.add("filter-show");
+			} else {
+				noResults.classList.remove("filter-show");
+			}
 		} else {
 			// else display all thumbnails
 			// remove star from filters button

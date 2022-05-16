@@ -247,6 +247,12 @@ nav {
 .project-thumbnail.filter-hide {
 	display: none;
 }
+#filter-no-results {
+	display: none;
+}
+#filter-no-results.filter-show {
+	display: block;
+}
 #projects-filters {
     margin: -1rem 2rem 0;
 }
