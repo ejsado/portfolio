@@ -134,6 +134,7 @@
     ?>
 	</div>
 	<script>
+		// if javascript is allowed, show filters
 		document.getElementById('projects-filters').classList.remove('javascript-disabled');
 	</script>
 	<script src="/utility/filter-thumbnails/filter-thumbnails.js"></script>
