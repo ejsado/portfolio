@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
 ## Analysis
 
-My general process for this entire analysis was to filter the data with SQL and display the data in a chart with R. I used `ggplot2` and `ggmap` for my visualizations in R. They work well together and allow for extensive customization. 
+My general process for this entire analysis was to extract the necessary data with SQL and display the data in a chart with R. I used `ggplot2` and `ggmap` for my visualizations in R. They work well together and allow for extensive customization. 
 
 ```r
 # R
