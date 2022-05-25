@@ -36,12 +36,12 @@
 		'us-temperate-days' => [
 			'title' => "Which area in the US has the most temperate days?",
 			'dateAdded' => strtotime("2 Sept 2021"),
-			'dateUpdated' => strtotime("2 Sept 2021"),
+			'dateUpdated' => strtotime("24 May 2022"),
 			'tools' => ["QGIS"],
 			'category' => "Analysis",
 			'tags' => ["qgis", "analysis"],
 			'interactiveProduct' => "",
-			'staticProduct' => "US_days_between_60_80_PDF.pdf",
+			'staticProduct' => "Temperate_Months_Contig_US.pdf",
 			'codeProduct' => ""
 		],
 		'us-wildfires-2020' => [
