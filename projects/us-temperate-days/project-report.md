@@ -2,10 +2,14 @@
 
 I’ve found that I’m most comfortable outdoors when the temperature is **between 60 and 80 degrees fahrenheit**. Usually, that means I’m only comfortable in the Spring and Fall seasons in Delaware. Many people circumvent their temperature discomfort with a second home, but that isn’t an option for me. Since I’m planning on moving soon, **which areas of the United States offer the most days of the year with mild daytime temperatures?**
 
-*Update May 24, 2022 -- The map now shows MONTHS instead of days. This discrete scale is easier to distinguish.*
-
-![Months color scale](us-temperate-days/MonthsScale.png)
-<small>Number of temperate months per year.</small>
+<aside>
+<p>Update May 24, 2022 </p>
+<p>The map now shows MONTHS instead of days. This discrete scale is easier to distinguish. </p>
+<p>Number of temperate months per year: </p>
+<img src="us-temperate-days/MonthsScale.png">
+<p>This scale is included on the PDF. </p>
+<p>Also, I have limited the area to just the contiguous states because the weather stations in Alaska and Hawaii do not cover enough area for accurate interpolation. </p>
+</aside>
 
 ---
 
