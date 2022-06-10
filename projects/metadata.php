@@ -131,6 +131,17 @@
 			'interactiveProduct' => "",
 			'staticProduct' => "",
 			'codeProduct' => "https://github.com/ejsado/nyc_trees_r"
+		],
+		'cape-henlopen-trails' => [
+			'title' => "Where are Cape Henlopen's bike trails?",
+			'dateAdded' => strtotime("9 June 2022"),
+			'dateUpdated' => strtotime("9 June 2022"),
+			'tools' => ["ArcGIS Online", "ArcGIS Pro", "ArcGIS Field Maps"],
+			'category' => "Cartography",
+			'tags' => ["arcgis-pro", "arcgis-online", "data-collection", "cartography"],
+			'interactiveProduct' => "https://ejs.maps.arcgis.com/apps/dashboards/3f0ffd2544214a74905cb7bdbbb8afe8",
+			'staticProduct' => "",
+			'codeProduct' => ""
 		]
 	];
 ?>

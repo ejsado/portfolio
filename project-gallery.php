@@ -49,6 +49,9 @@
 							<input  id="filter-arcgis-online" 	class="filter-checkbox" name="tool" type="checkbox">
 							<label for="filter-arcgis-online"	>ArcGIS Online</label>
 
+							<input  id="filter-data-collection" class="filter-checkbox" name="tool" type="checkbox">
+							<label for="filter-data-collection"	>Data Collection</label>
+
 							<input  id="filter-image-editor" 	class="filter-checkbox" name="tool" type="checkbox">
 							<label for="filter-image-editor"	>Image Editor</label>
 						</div>

@@ -491,6 +491,7 @@ ggplot(data=treeDiameters, aes(x=tree_dbh, y=0)) +
 ```
 
 ![NYC Street Tree Diameter Distribution](nyc-trees/treeDiameter.png)
+<small>A violin plot overlayed with a box plot.</small>
 
 Any tree over 5 inches in diameter (the first quartile) should be considered old enough to include. Let’s map the oldest trees in NYC.
 
