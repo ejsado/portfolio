@@ -1,10 +1,10 @@
 ## Summary
 
-The beaches in Delaware are a very popular tourist attraction in the summer. Many visitors choose to drive and park in the lot closest to the sand, but there is another option. Lewes, Rehoboth, and Cape Henlopen State Park are all connected with an impressive multi-use trail network designed with bikes in mind. So, **what does the current bike trail network look like and what facilities are within a reasonable distance of the trails?**
+The beaches in Delaware are a very popular tourist attraction in the summer. Many visitors choose to drive and park in the lot closest to the sand, but there is another option. Lewes, Rehoboth, and Cape Henlopen State Park are all connected with an impressive multi-use trail network designed with bikes in mind. So, **what does the current bike trail network look like?**
 
 <aside>
 <p>Map Limitations</p>
-<p>Note that I collected portions of this data myself and that I did not include every trail and every facility. I purposefully excluded items that did not meet certain criteria. Also, I may have missed some items because I am human.</p>
+<p>Note that I collected portions of this data myself and that I did not include every trail and facility. I purposefully excluded items that did not meet certain criteria. Also, I may have missed some items because I am human.</p>
 </aside>
 
 ---
@@ -25,9 +25,9 @@ Thankfully, additional bike trails are planned in the Cape Henlopen area, includ
 
 Of course, my map is not the only trail map of this area. However, none of the options that I found focused specifically on bike infrastructure while including all of Lewes, Rehoboth, and Cape Henlopen State Park. Here are the ones that I found:
 
-- [Play Outside Map via Delaware.gov](https://playoutside.dnrec.delaware.gov/) -- Messy and includes planned trails that don't exist yet.
-- [Georgetown Lewes Rail Trail via Trailforks](https://www.trailforks.com/trails/georgetown-lewes-rail-trail/) -- Pretty close, but still missing some segments as well as facilities. 
-- [Lewes-Rehoboth Regional Map PDF via DE State Parks](https://destateparks.com/wwwroot/maps/cape-henlopen/regionalloop15.pdf) -- The best I could find, but it's a PDF and it's missing a lot of detail.
+- [Play Outside Map via Delaware.gov](https://playoutside.dnrec.delaware.gov/)-- Messy and includes planned trails that don't exist yet.
+- [Georgetown Lewes Rail Trail via Trailforks](https://www.trailforks.com/trails/georgetown-lewes-rail-trail/)-- Pretty close, but still missing some segments as well as facilities. 
+- [Lewes-Rehoboth Regional Map PDF via DE State Parks](https://destateparks.com/wwwroot/maps/cape-henlopen/regionalloop15.pdf)-- The best I could find, but it's a PDF and it's missing a lot of detail.
 
 ---
 
@@ -35,7 +35,7 @@ Of course, my map is not the only trail map of this area. However, none of the o
 
 A portion of the facility locations (small items such as bike repair stations) were collected on location with ArcGIS Field Maps. I created smart forms for each type of facility, which allowed me to collect additional data that is not displayed on the map. For example, I recorded an approximate number of parking spaces in each lot as well as usage restrictions on each trail section.
 
-ESRI charges additional money for a “tracking license” which allows Field Maps users to track and record their location. This would allow easy collection of trail data, but I don't have the budget for that nor do I have the time to ride/walk every trail. Instead, I used ArcGIS Pro to import official trail data from the State of Delaware.
+ESRI charges additional money for a “tracking license” which allows Field Maps users to track and record their location. This would allow for easy collection of trail data, but I don't have the budget nor do I have the time to ride/walk every trail. Instead, I used ArcGIS Pro to import official trail data from the State of Delaware.
 
 https://opendata.firstmap.delaware.gov/datasets/delaware::delaware-trails-and-pathways-2-0/about
 
