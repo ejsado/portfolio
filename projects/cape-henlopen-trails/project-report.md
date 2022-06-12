@@ -1,6 +1,6 @@
 ## Summary
 
-The beaches in Delaware are a very popular tourist attraction in the summer. Many visitors choose to drive and park in the lot closest to the sand, but there is another option. Lewes, Rehoboth, and Cape Henlopen State Park are all connected with an impressive multi-use trail network designed with bikes in mind. So, **what does the current bike trail network look like?**
+The beaches in Delaware are a very popular tourist attraction in the summer. Many visitors choose to drive and park in the lot closest to the sand, but there is another option. Lewes, Rehoboth, and Cape Henlopen State Park are all connected with an impressive multi-use trail network designed with bikes in mind. 
 
 <aside>
 <p>Map Limitations</p>

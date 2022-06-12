@@ -133,7 +133,7 @@
 			'codeProduct' => "https://github.com/ejsado/nyc_trees_r"
 		],
 		'cape-henlopen-trails' => [
-			'title' => "Where are Cape Henlopen's bike trails?",
+			'title' => "Trail Map: Cape Henlopen Region",
 			'dateAdded' => strtotime("9 June 2022"),
 			'dateUpdated' => strtotime("9 June 2022"),
 			'tools' => ["ArcGIS Online", "ArcGIS Pro", "ArcGIS Field Maps", "ArcGIS Dashboards"],
