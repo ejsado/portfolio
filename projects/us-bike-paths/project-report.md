@@ -11,15 +11,15 @@ I always prefer riding my road bike on a designated bike path. Any sort of separ
 
 These cycle tracks are the ones I’m interested in. They are tagged as [“cycleways”](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dcycleway).
 
-Cycleways are not exclusive to bike riders, they are typically paved paths shared with pedestrians. 
+Cycleways are not always exclusive to bike riders, they are typically paved paths shared with pedestrians. 
 
 ---
 
 ## Data Acquisition and Preparation
 
-I used Osmosis to filter the same USA snapshot I used in my toll booths map. [Osmosis](https://wiki.openstreetmap.org/wiki/Osmosis) is a command line tool for processing OpenStreetMap data and you can find the [USA OSM snapshot here](https://download.geofabrik.de/north-america/us.html).
+I used Osmosis to filter a snapshot of USA OSM data from September 2021, which is the same snapshot I used in my toll booths map. You can find the [USA OSM snapshot here](https://download.geofabrik.de/north-america/us.html).
 
-I had to use Osmosis because other tools I tried were not practical for scanning and filtering 7 gigabytes of data. I wrote a more detailed explanation in my [U.S. Toll Booths report](/projects/?name=us-toll-booths).
+[Osmosis](https://wiki.openstreetmap.org/wiki/Osmosis) is a command line tool for processing OpenStreetMap data. I had to use Osmosis because other tools I tried were not practical for scanning and filtering 7 gigabytes of data. I wrote a more detailed explanation in my [U.S. Toll Booths report](/projects/?name=us-toll-booths).
 
 Here is the command I used to filter the cycleways:
 
@@ -43,3 +43,6 @@ In short, here is what this command does:
 
 The carrots (`^`) simply allow the command to split multiple lines for readability.
 
+To create the heat map layer, I used the Line Density geoprocessing tool in QGIS. This tool outputs an interpolated raster, which I was able to save as a GeoTIFF.
+
+I did my analysis and created the PDF map in QGIS, but to create the web map I utilized ArcGIS Pro. All of my web maps are hosted by ESRI in ArcGIS Online, and ArcGIS Pro allows me to easily upload my layers for this purpose. 

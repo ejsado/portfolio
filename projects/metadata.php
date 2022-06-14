@@ -91,11 +91,11 @@
 		'us-bike-paths' => [
 			'title' => "Where in the US has the most bike paths?",
 			'dateAdded' => strtotime("1 Oct 2021"),
-			'dateUpdated' => strtotime("16 Dec 2021"),
-			'tools' => ["QGIS"],
+			'dateUpdated' => strtotime("14 June 2022"),
+			'tools' => ["QGIS", "ArcGIS Pro", "ArcGIS Online"],
 			'category' => "Analysis",
-			'tags' => ["qgis", "analysis"],
-			'interactiveProduct' => "",
+			'tags' => ["qgis", "arcgis-pro", "arcgis-online", "analysis"],
+			'interactiveProduct' => "/webmaps/us-bike-paths/",
 			'staticProduct' => "Bike_Path_Heat_Map.pdf",
 			'codeProduct' => ""
 		],

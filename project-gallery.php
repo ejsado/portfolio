@@ -138,7 +138,7 @@
 	</div>
 	<div id="filter-no-results">
 		<p class="text-weight-bold text-size-large text-align-center">
-			No results.
+			No results. Try fewer filters.
 		</p>
 	</div>
 	<script>

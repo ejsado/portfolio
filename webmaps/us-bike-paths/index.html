@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>US Wildfires 2020: Interactive Map &rtrif; Eric J.S.</title>
+        <title>Florida Sea Level Rise: Interactive Map &rtrif; Eric J.S.</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css">
@@ -10,58 +10,51 @@
         <script>
             require([
 				"esri/config",
-				"esri/WebScene",
-				"esri/views/SceneView",
+				"esri/WebMap",
+				"esri/views/MapView",
 				"esri/widgets/ScaleBar",
       			"esri/widgets/Legend",
 				"esri/widgets/Expand"
 			], function (
 				esriConfig,
-				WebScene,
-				SceneView,
+				WebMap,
+				MapView,
 				ScaleBar,
-				Legend,
 				Expand
 			){
 				esriConfig.apiKey = "AAPK0efec420f69f4e368735408b2dcf3dd2m3OpefIcFYbjVCGgqCAwiaMxJX2osKC57T45H-TK_3JEapFIVgiY4TtQU7mvvfrn";
 				
-				const webscene = new WebScene({
+				const webmap = new WebMap({
 					portalItem: {
-						id: "ad81e86a36de4e5792fdd7bec738d381"
+						id: "9298ee30c8db4c8592fdf5dc5226c6a6"
 					}
 				});
 				
-				const view = new SceneView({
-					map: webscene,
-					container: "map-container", // div element
-					constraints: {
-						altitude: {
-							min: 10000
-						},
-						tilt: {
-							max: 0.5
-						},
-						rotationEnabled: false
-					}
+				const view = new MapView({
+					map: webmap,
+					container: "map-container" // div element
 				});
 
+				const scalebar = new ScaleBar({
+					view: view
+				});
+
+				view.ui.add("logo", "bottom-left");
 				view.ui.move("zoom", "bottom-right");
-				view.ui.move("compass", "bottom-right");
-				view.ui.remove("navigation-toggle");
+				view.ui.add(scalebar, "bottom-right");
 				view.ui.add("map-title", "top-left");
 				view.ui.add("project-link", "top-left");
-				view.ui.add("logo", "bottom-left");
-				
+
             });
         </script>
     </head>
     <body>
         <div id="map-container"></div>
 		<div id="map-title" class="esri-widget">
-			<h1>US Wildfire Areas in 2020</h1>
+			<h1>US Bike Paths Heat Map (September 2021)</h1>
 		</div>
 		<div id="project-link" class="esri-widget">
-			<a href="/projects/?name=us-wildfires-2020">More info about this project &raquo;</a>
+			<a href="/projects/?name=us-bike-paths">More info about this project &raquo;</a>
 		</div>
 		<div id="logo" class="esri-widget">
 			<a href="/" id="logo-link-small">
