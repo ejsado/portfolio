@@ -1,6 +1,6 @@
 <!-- call to action content -->
 <div id="actions">
-	<div id="job-search-actions">
+	<!-- <div id="job-search-actions">
 		<p class="text-align-center">
 			I'm looking for a full-time position in the GIS sector.
 		</p>
@@ -11,14 +11,14 @@
 					Send a message
 				</a>
 			</div>
-			<!-- <div class="button-container">
+			<div class="button-container">
 				<a class="action-button outline" href="/contact/?form=resume">
 					<span class="material-icons text-size-large vertical-align-sub">description</span>
 					Request a resume
 				</a>
-			</div> -->
+			</div>
 		</div>
-	</div>
+	</div> -->
 	<div id="social-actions">
 		<a href="https://github.com/ejsado" id="github-button" title="My Github Profile">
 			<img class="social-icon" src="/media/github-icon-64.png" alt="GitHub icon">

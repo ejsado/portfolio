@@ -142,6 +142,17 @@
 			'interactiveProduct' => "https://ejs.maps.arcgis.com/apps/dashboards/3f0ffd2544214a74905cb7bdbbb8afe8",
 			'staticProduct' => "",
 			'codeProduct' => ""
+		],
+		'batch-lidar' => [
+			'title' => "Automated: Batch LIDAR Processing",
+			'dateAdded' => strtotime("17 June 2022"),
+			'dateUpdated' => strtotime("17 June 2022"),
+			'tools' => ["ArcGIS Pro", "Python"],
+			'category' => "Automation",
+			'tags' => ["arcgis-pro", "python", "automation"],
+			'interactiveProduct' => "",
+			'staticProduct' => "",
+			'codeProduct' => "https://github.com/ejsado/batch_lidar"
 		]
 	];
 ?>
