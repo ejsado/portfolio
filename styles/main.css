@@ -476,6 +476,9 @@ nav {
 #project-report img {
     width: 100%;
     max-width: 40rem;
+    max-height: 40rem;
+    object-fit: contain;
+    background-color: #DDD;
 }
 #project-report small {
     display: block;

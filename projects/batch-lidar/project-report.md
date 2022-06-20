@@ -19,7 +19,7 @@ import arcpy
 
 # environment settings
 # set the geodatabase where the script will create items
-arcpy.env.workspace = r"D:\Projects_Tower2019\GIS\Lidar\AutomateLidar.gdb"
+arcpy.env.workspace = r"C:\path\to\geodatabase.gdb"
 
 # overwrite items in the workspace with items created by this script
 # if this is false, an error will occur when an item already exists
@@ -47,7 +47,7 @@ createTIN = True
 
 # LAS/LAZ/ZLAS directory
 # all matching files in the directory will be converted
-convertFolder = r"D:\Projects_Tower2019\GIS\Lidar\data\LAZ"
+convertFolder = r"C:\path\to\LAZ_files"
 
 # coordinate system for the input LAS/LAZ/ZLAS files
 # https://pro.arcgis.com/en/pro-app/latest/arcpy/classes/spatialreference.htm
@@ -56,7 +56,7 @@ convertFolder = r"D:\Projects_Tower2019\GIS\Lidar\data\LAZ"
 definedCRS = arcpy.SpatialReference(6342, 5703)
 
 # output folder for files converted to LAS
-outputFolder = r"D:\Projects_Tower2019\GIS\Lidar\data\LAS_output"
+outputFolder = r"C:\path\to\LAS_output"
 
 # folder containing LAS files for the LAS dataset
 lasFolder = outputFolder
@@ -64,7 +64,7 @@ lasFolder = outputFolder
 # LAS dataset name and location
 # this file will be overwritten if it already exists
 # must end in .lasd
-lasDataset = r"D:\Projects_Tower2019\GIS\Lidar\data\wind_cave_lasd.lasd"
+lasDataset = r"C:\path\to\new_lasd.lasd"
 
 # product resolution/interval (units are based on definedCRS)
 # used as the raster cell size for the DEM
@@ -73,14 +73,14 @@ lasDataset = r"D:\Projects_Tower2019\GIS\Lidar\data\wind_cave_lasd.lasd"
 resolution = 5
 
 # DEM file name to be stored in the geodatabase
-demRaster = arcpy.env.workspace + r"\wind_cave_LASD_DEM"
+demRaster = arcpy.env.workspace + r"\new_LASD_DEM"
 
 # contour feature class file name to be stored in the geodatabase
-contourFeature = arcpy.env.workspace + r"\wind_cave_LASD_contour"
+contourFeature = arcpy.env.workspace + r"\new_LASD_contour"
 
 # TIN dataset name
 # this will be a directory
-tinDataset = r"D:\Projects_Tower2019\GIS\Lidar\data\wind_cave_LASD_TIN"
+tinDataset = r"C:\path\to\new_LASD_TIN"
 
 ```
 
@@ -130,6 +130,9 @@ Next, let’s combine the LAS files into a single dataset for easy reference.
 
 ```
 
+![LIDAR point cloud](batch-lidar/lidar.png)
+<small>LIDAR dataset of a section of Wind Cave National Park. This dataset consists of 3 LAS files.</small>
+
 Now let’s generate a DEM. It will have a resolution of 5 meters.
 
 ```python
@@ -145,6 +148,9 @@ Now let’s generate a DEM. It will have a resolution of 5 meters.
 
 ```
 
+![DEM raster](batch-lidar/dem.png)
+<small>DEM raster generated from the LIDAR dataset.</small>
+
 Create contour lines from the LAS dataset and not the DEM. Always create new products from the original source to avoid introducing data inaccuracy. The contour interval will be 5 meters.
 
 ```python
@@ -159,6 +165,9 @@ Create contour lines from the LAS dataset and not the DEM. Always create new pro
 		if verboseOutput: print(result)
 
 ```
+
+![Contour lines](batch-lidar/contour.png)
+<small>Contour lines generated from the LIDAR dataset.</small>
 
 Create a TIN by thinning the points. Every 5 meter square will be reduced to one point. ESRI recommends TINs should not have more than 5 million points to improve rendering times.
 
@@ -177,8 +186,8 @@ Create a TIN by thinning the points. Every 5 meter square will be reduced to one
 
 ```
 
-![Footprints and seamlines](automated-mosaic/lines.png)
-<small>Green lines are footprints. Blue are seamlines.</small>
+![TIN dataset](batch-lidar/tin.png)
+<small>Triangulated Irregular Network generated from the LIDAR dataset.</small>
 
 This entire script is [hosted on GitHub](https://github.com/ejsado/batch_lidar).
 
